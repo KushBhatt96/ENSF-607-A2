@@ -16,7 +16,7 @@ public class Client {
 			palinSocket = new Socket(serverName, portNumber);
 			stdIn = new BufferedReader(new InputStreamReader(System.in));
 			socketIn = new BufferedReader(new InputStreamReader(
-					palinSocket.getInputStream()));
+			palinSocket.getInputStream()));
 			socketOut = new PrintWriter((palinSocket.getOutputStream()), true);
 		} catch (IOException e) {
 			System.err.println(e.getStackTrace());

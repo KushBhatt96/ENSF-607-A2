@@ -25,8 +25,9 @@ public class Server {
 		String line = null;
 		while(true) {
 			try {
-				line = socketIn.readLine().toLowerCase();
-				if(line.equals("QUIT")) {
+				line = socketIn.readLine();
+				System.out.println(line);
+				if(line == null) {
 					line = "Good Bye.";
 					socketOut.println(line);
 					break;
