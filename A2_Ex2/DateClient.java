@@ -5,12 +5,21 @@ import java.io.PrintWriter;
 import java.net.Socket;
 
 
+/**
+ * The type Date client.
+ */
 public class DateClient {
     private Socket aSocket;
     private PrintWriter socketOut;
     private BufferedReader socketIn;
     private BufferedReader stdIn;
 
+    /**
+     * Instantiates a new Date client.
+     *
+     * @param serverName the server name
+     * @param portNumber the port number
+     */
     public DateClient(String serverName, int portNumber) {
         try {
             aSocket = new Socket(serverName, portNumber);
@@ -23,11 +32,19 @@ public class DateClient {
         }
     }
 
+    /**
+     * The entry point of application.
+     *
+     * @param args the input arguments
+     */
     public static void main(String[] args) {
         DateClient aClient = new DateClient("localhost", 9090);
         aClient.communicate();
     }
 
+    /**
+     * Communicate.
+     */
     public void communicate() {
         String line = "";
         String response = "";
