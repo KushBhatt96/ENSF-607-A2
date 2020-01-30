@@ -7,7 +7,13 @@ import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class DateServer {
+/**
+ * @author Kush Bhatt and Matthew Vanderway
+ * @version 1.0
+ * January 29, 2019
+ * Server class in the simple client-server application
+ */
+ public class DateServer {
 	private BufferedReader socketInput;
 	private PrintWriter socketOutput;
 	private ServerSocket serverSocket;

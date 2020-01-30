@@ -6,7 +6,10 @@ import java.net.Socket;
 
 
 /**
- * The type Date client.
+ * @author Kush Bhatt and Matthew Vanderway
+ * @version 1.0
+ * January 29, 2019
+ * DateClient class in the simple client-server application
  */
 public class DateClient {
     private Socket aSocket;
@@ -43,7 +46,8 @@ public class DateClient {
     }
 
     /**
-     * Communicate.
+     * Reads the input stream from the standard input (console keyboard),
+	 * writes it to a socket and then displays the response.
      */
     public void communicate() {
         String line = "";
