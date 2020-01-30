@@ -4,15 +4,26 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
 
+/**
+ * @author Kush Bhatt and Matthew Vanderway
+ * @version 1.0
+ * January 29, 2019
+ * Client class in the simple client-server application
+ */
 public class Client {
-	private PrintWriter socketOut; //output to server
-	private Socket palinSocket;   //socket object
-	private BufferedReader stdIn;  //user input
-	private BufferedReader socketIn; //server input
+	private PrintWriter socketOut;
+	private Socket palinSocket;
+	private BufferedReader stdIn;
+	private BufferedReader socketIn;
 
+	/**
+	 * Client constructor that initializes all of the instance variables including the
+	 * socket, input and output streams
+	 * @param serverName
+	 * @param portNumber
+	 */
 	public Client(String serverName, int portNumber) {
 		try {
-			//instantiating all of the instance variables here
 			palinSocket = new Socket(serverName, portNumber);
 			stdIn = new BufferedReader(new InputStreamReader(System.in));
 			socketIn = new BufferedReader(new InputStreamReader(
@@ -23,6 +34,10 @@ public class Client {
 		}
 	}
 
+	/**
+	 * Takes in user input and as long as the input is not QUIT, sends
+	 * the string to the server. Then it accepts a response from the server.
+	 */
 	public void communicate()  {
 
 		String line = "";

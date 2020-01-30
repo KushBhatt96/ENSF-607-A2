@@ -5,6 +5,12 @@ import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.net.Socket;
 
+/**
+ * @author Kush Bhatt and Matthew Vanderway
+ * @version 1.0
+ * January 29, 2019
+ * Server class in the simple client-server application
+ */
 public class Server {
 	
 	private Socket aSocket;
@@ -12,21 +18,27 @@ public class Server {
 	private PrintWriter socketOut;
 	private BufferedReader socketIn;
 	
+	/**
+	 * Server constructor that initializes a new ServerSocket object with a port number.
+	 */
 	public Server() {
 		try {
 			serverSocket = new ServerSocket(8099);
 		}catch (IOException e){
-			System.out.println("Unable to create server socket.");
-			e.printStackTrace();
+			System.out.println("Unable to create server socket object." + e.getMessage());
 		}
 	}
 	
+	/**
+	 * Receives and stores a string input from the client. If string does not equal to null,
+	 * the method checks if the string is a palindrome and returns a response to the client
+	 * accordingly.
+	 */
 	public void checkPalindrome() {
 		String line = null;
 		while(true) {
 			try {
 				line = socketIn.readLine();
-				System.out.println(line);
 				if(line == null) {
 					line = "Good Bye.";
 					socketOut.println(line);
@@ -43,8 +55,7 @@ public class Server {
 					socketOut.println(line + " is not a palindrome");
 				}
 			} catch(IOException e) {
-				System.out.println("Unable to check for palindrome.");
-				e.printStackTrace();
+				System.out.println("Unable to read in the line." + e.getMessage());
 			}
 		}
 	}
@@ -55,11 +66,11 @@ public class Server {
 		try {
 			//here we are accepting the connection from a client
 			myServer.aSocket = myServer.serverSocket.accept();
-			System.out.println("Connection accepted by server!");
+			System.out.println("Server is now running.");
 			myServer.socketIn = new BufferedReader(new InputStreamReader(myServer.aSocket.getInputStream()));
 			myServer.socketOut = new PrintWriter((myServer.aSocket.getOutputStream()), true);
 			
-			//next we can call an isPalindrome function
+			//next we can call a checkPalindrome function
 			myServer.checkPalindrome();
 			
 			//lastly we will close the input and output streams
