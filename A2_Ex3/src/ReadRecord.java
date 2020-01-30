@@ -1,7 +1,8 @@
 /** 
  * Started by M. Moussavi
  * March 2015
- * Completed by: STUDENT(S) NAME
+ * Completed by: Kush Bhatt
+ * 				 Matthew Vanderway
  */
 
 import java.io.EOFException;
@@ -32,7 +33,7 @@ public class ReadRecord {
         
         /* The following loop is supposed to use readObject method of
          * ObjectInputSteam to read a MusicRecord object from a binary file that
-         * contains several reords.
+         * contains several records.
          * Loop should terminate when an EOFException is thrown.
          */
         
@@ -40,15 +41,27 @@ public class ReadRecord {
         {
             while ( true )
             {
+            	// TO BE COMPLETED BY THE STUDENTS
+                record = (MusicRecord) input.readObject();
+                		System.out.println(record.getYear()+"\n"+ record.getSongName() 
+                		+ "\n" + record.getSingerName() + "\n" + record.getPurchasePrice() + "\n----------------");
                 
-                
-                // TO BE COMPLETED BY THE STUDENTS
-                
-           
             }   // END OF WHILE
+            
+         // ADD NECESSARY catch CLAUSES HERE    
+        }catch(EOFException e) {
+        	System.out.println("\nReached end of file.");
+        }catch(ClassNotFoundException e1) {
+        	System.out.println("Unable to locate the object." + e1.getMessage());
+        }catch(IOException e2) {
+        	System.out.println("Error in opening the file." + e2.getMessage());
+        }finally{
+        	try {
+				input.close();
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
         }
-                // ADD NECESSARY catch CLAUSES HERE
-
     }           // END OF METHOD 
     
     

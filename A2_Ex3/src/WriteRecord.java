@@ -1,7 +1,8 @@
 /**
  * Started by M. Moussavi
  * March 2015
- * Completed by: STUDENT(S) NAME
+ * Completed by: Kush Bhatt
+ * 				 Matthew Vanderway
  */
 
 import java.io.FileInputStream;
@@ -9,7 +10,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectOutputStream;
-import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
@@ -51,25 +51,12 @@ public class WriteRecord {
      // TO BE COMPLETED BY THE STUDENTS
 		try {
 			in = new FileInputStream(textFileName);
-			//int c;
-			//while((c = in.read()) != -1) {
-			//	System.out.println(c);
-			//}
 			textFileIn = new Scanner(in);
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
+			System.out.println("File could not be located.\n" + e.getMessage());
 		} catch (IOException e1) {
-			e1.printStackTrace();
+			System.out.println("Error in opening the file.\n" + e1.getMessage());
 		}
-		//finally {
-		//	if(in != null) {
-		//		try {
-		//			in.close();
-		//		}catch (IOException e){
-		//			e.printStackTrace();
-		//		}
-		//	}
-		//}
 	}
 
 	/**
@@ -82,9 +69,9 @@ public class WriteRecord {
 		try {
 			objectOut = new ObjectOutputStream(new FileOutputStream(objectFileName));
 		} catch (FileNotFoundException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
+			System.out.println("File could not be located.\n" + e.getMessage());
+		} catch (IOException e1) {
+			System.out.println("Error in opening the file.\n" + e1.getMessage());
 		} 
 	}
 	
@@ -94,9 +81,9 @@ public class WriteRecord {
 	 * file and serializes each record object into a binary file
 	 */
 	public void createObjectFile() {
-		ArrayList<MusicRecord> musicArray = new ArrayList<MusicRecord>();
 		while (textFileIn.hasNext()) // loop until end of text file is reached
 		{
+			record = new MusicRecord();
 			int year = Integer.parseInt(textFileIn.nextLine());
 			System.out.print(year + "  ");       // echo data read from text file
             
@@ -113,19 +100,20 @@ public class WriteRecord {
 			textFileIn.nextLine();   // read the dashed lines and do nothing
             
             // THE REST OF THE CODE TO BE COMPLETED BY THE STUDENTS
-			musicArray.add(record);
+			try {
+				objectOut.writeObject(record);
+			}catch(IOException ioException) {
+				System.err.println("Error writing to file.");
+			}catch(NoSuchElementException elementException) {
+				System.err.println("Invalid input. Please try again.");
+			}
 		}
 		// YOUR CODE GOES HERE
-		try {
-			objectOut.writeObject(musicArray);
-		}catch(IOException ioException) {
-			System.err.println("Error writing to file.");
-		}catch(NoSuchElementException elementException) {
-			System.err.println("Invalid input. Please try again.");
-		}
+
 		try {
 			if(objectOut != null) {
 				objectOut.close();
+				in.close();
 			}
 		}catch(IOException ioException) {
 			System.err.println("Error Closing file");
