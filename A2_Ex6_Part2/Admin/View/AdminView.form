@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.AdminView">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="58" y="20" width="1411" height="815"/>
+    </constraints>
+    <properties>
+      <background color="-12170933"/>
+      <enabled value="true"/>
+      <font name="Arial" size="12" style="1"/>
+      <foreground color="-4934476"/>
+    </properties>
+    <border type="bevel-raised" title-justification="2" title-position="2">
+      <font name="Arial Black" size="42" style="1"/>
+      <title-color color="-4473925"/>
+    </border>
+    <children>
+      <grid id="63576" binding="hostPanel" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12170933"/>
+        </properties>
+        <border type="bevel-raised"/>
+        <children>
+          <grid id="b04c1" binding="filePanel" layout-manager="GridLayoutManager" row-count="5" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="5" left="5" bottom="5" right="5"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="c199e" class="javax.swing.JLabel" binding="subTitle">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="24" style="1"/>
+                  <text value="Client Mangement System Database Operations"/>
+                </properties>
+              </component>
+              <component id="972b" class="javax.swing.JLabel" binding="selectOpLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="2" indent="1" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="2"/>
+                  <horizontalTextPosition value="2"/>
+                  <text value="Select operation to perform:"/>
+                </properties>
+              </component>
+              <component id="344c6" class="javax.swing.JRadioButton" binding="backupRadioButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="18" style="1"/>
+                  <nextFocusableComponent value="101cc"/>
+                  <selected value="true"/>
+                  <text value="Backup Current Database"/>
+                  <toolTipText value="Search by the client's unique ID number"/>
+                </properties>
+              </component>
+              <component id="101cc" class="javax.swing.JRadioButton" binding="restoreRadioButton">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="6" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="18" style="1"/>
+                  <nextFocusableComponent value="c7e3e"/>
+                  <text value="Restore Database"/>
+                  <toolTipText value="Search by the client's last name"/>
+                </properties>
+              </component>
+              <component id="c7e3e" class="javax.swing.JButton" binding="goButton">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <nextFocusableComponent value="344c6"/>
+                  <text value="GO!"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="db507" class="javax.swing.JLabel" binding="mainTitle">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4934476"/>
+          <font name="Arial Black" size="28" style="1"/>
+          <foreground color="-4934476"/>
+          <text value="Client Management Admin Screen"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="operationRBMenu" bound="true">
+      <member id="344c6"/>
+      <member id="344c6"/>
+      <member id="a8c8d"/>
+      <member id="101cc"/>
+    </group>
+  </buttonGroups>
+</form>
