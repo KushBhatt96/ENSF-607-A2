@@ -16,9 +16,9 @@ import Model.Constants;
 /**
  * boardView acts as the GUI manager for the program. It initializes the JFrame with all of its components and also 
  * any dialog boxes and events.
- * @author Kush
+ * @author Kush Bhatt
  * @version 1.0
- * @Since 11/5/2019
+ * @Since February 10, 2020
  */
 public class BoardView extends JFrame implements Constants {
 	
@@ -179,11 +179,16 @@ public class BoardView extends JFrame implements Constants {
 		JOptionPane.showMessageDialog(this,"Spot already taken!");
 	}
 	
-	
+	/**
+	 * Check if it is your turn or not
+	 */
 	public void notYourTurn() {
 		JOptionPane.showMessageDialog(this,"It isn't your turn yet!");
 	}
 	
+	/**
+	 * Check if the opponent has quit
+	 */
 	public void opponentHasQuit() {
 		JOptionPane.showMessageDialog(this,"Your opponent has quit the game.");
 	}
@@ -198,7 +203,9 @@ public class BoardView extends JFrame implements Constants {
 		return theBoard[row][col].getText(); 
 	}
 	
-	//disable all buttons
+	/**
+	 * Disable all of the buttons.
+	 */
 	public void disableButtons() {
 		for(int i=0; i<3; i++) {
 			for(int j=0; j<3; j++) {
@@ -206,7 +213,10 @@ public class BoardView extends JFrame implements Constants {
 			}
 		}
 	}
-	//enable all buttons
+	
+	/**
+	 * Enable all of the buttons.
+	 */
 	public void enableButtons() {
 		for(int i=0; i<3; i++) {
 			for(int j=0; j<3; j++) {

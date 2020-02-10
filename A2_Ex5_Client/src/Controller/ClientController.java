@@ -9,6 +9,12 @@ import Model.Board;
 import Model.MoveData;
 import View.BoardView;
 
+/**
+ * The client controller class that interacts with the server.
+ * @author Kush Bhatt
+ * @version 1.0
+ * @since February 10, 2020
+ */
 public class ClientController {
 
 	private Socket aSocket;
@@ -33,7 +39,9 @@ public class ClientController {
 	}
 	
 
-	
+	/**
+	 * Method that waits for a serializable that contains the move data from the opponent.
+	 */
 	public void getOpponentsMove() {
 		while(true) {
 		try {
@@ -49,6 +57,10 @@ public class ClientController {
 		}
 	}
 	
+	/**
+	 * Method responsible for updating the GUI.
+	 * @param move
+	 */
 	public void UpdateGUI(MoveData move) {
 		int makeUpdate = move.getMakeUpdate();
 		switch(makeUpdate) {
@@ -122,6 +134,11 @@ public class ClientController {
 		}
 	}
 	
+	
+	/**
+	 * Method used to send over move data from current player to the server.
+	 * @param move
+	 */
 	public void sendMove(MoveData move) {
 		try {
 			socketOut.writeObject(move);
@@ -131,6 +148,9 @@ public class ClientController {
 		}
 	}
 	
+	/**
+	 * Overloaded sendMove method that is responsible for sending the user name to the server during the start of the game.
+	 */
 	public void sendMove() {
 		name = boardView.playerName();
 		MoveData move = new MoveData(name);

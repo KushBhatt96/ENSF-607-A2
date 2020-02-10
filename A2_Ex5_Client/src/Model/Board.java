@@ -4,9 +4,9 @@ package Model;
 /**
  * The Board class creates a board, marks the board, and checks to see if the game is over.
  * The board has dimensions of 3 x 3 cells.
- * @author Instructor
+ * @author Kush Bhatt
  * @version 1.0
- * @since October 5, 2019
+ * @since February 10, 2020
  */
 public class Board implements Constants {
 	/**

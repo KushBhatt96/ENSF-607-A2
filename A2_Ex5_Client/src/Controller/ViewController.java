@@ -10,11 +10,23 @@ import Model.Board;
 import Model.MoveData;
 import View.BoardView;
 
+/**
+ * The controller class that manages the View via the use of actionlistener inner classes.
+ * @author Kush Bhatt
+ * @version 1.0
+ * @since February 10, 2020
+ */
 public class ViewController {
 	private Board theClientBoard;
 	private BoardView boardView;
 	private ClientController client;
 	
+	
+	/**
+	 * @param theClientBoard
+	 * @param boardView
+	 * @param client
+	 */
 	public ViewController(Board theClientBoard, BoardView boardView, ClientController client) {
 		this.theClientBoard = theClientBoard;
 		this.boardView = boardView;
@@ -49,6 +61,11 @@ public class ViewController {
 	}
 
 	
+	/**
+	 * Button Listener for 00
+	 * @author Kush
+	 *
+	 */
 	class BtnListener1 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -70,6 +87,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 01
+	 * @author Kush
+	 *
+	 */
 	class BtnListener2 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -91,6 +113,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 02
+	 * @author Kush
+	 *
+	 */
 	class BtnListener3 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -112,6 +139,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 10
+	 * @author Kush
+	 *
+	 */
 	class BtnListener4 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -133,6 +165,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 11
+	 * @author Kush
+	 *
+	 */
 	class BtnListener5 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -154,6 +191,12 @@ public class ViewController {
 	};
 	}
 	
+	
+	/**
+	 * Button Listener for 12
+	 * @author Kush
+	 *
+	 */
 	class BtnListener6 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -175,6 +218,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 20
+	 * @author Kush
+	 *
+	 */
 	class BtnListener7 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -196,6 +244,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 21
+	 * @author Kush
+	 *
+	 */
 	class BtnListener8 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
@@ -217,6 +270,11 @@ public class ViewController {
 	};
 	}
 	
+	/**
+	 * Button Listener for 22
+	 * @author Kush
+	 *
+	 */
 	class BtnListener9 implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {

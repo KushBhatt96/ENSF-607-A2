@@ -7,9 +7,9 @@ package Model;
  * in the game itself. Game class also contains the main method. This application
  * runs a TIC-TAC-TOE game with 2 players. 
  * 
- * @author Instructor
+ * @author Kush
  * @version 1.0
- * @since October 5, 2019
+ * @since February 10, 2020
  */
 public class Game implements Constants, Runnable {
 
@@ -28,14 +28,10 @@ public class Game implements Constants, Runnable {
         this.oPlayer = oPlayer;
         xPlayer.setOpponent(oPlayer);
 		oPlayer.setOpponent(xPlayer);
-		//theBoard.display();
 	}
     
 	@Override
 	public void run() {
-	System.out.println("TESTING ON SERVER");
-	//xPlayer.retrieveName();
-	//oPlayer.retrieveName();
 	xPlayer.initiate();
 	oPlayer.initiate();
 	System.out.println("The game will now begin!");

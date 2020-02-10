@@ -2,23 +2,63 @@ package Model;
 
 import java.io.Serializable;
 
+/**
+ * MoveData is a serializable object that contains information about each move that a player makes.
+ * The MoveData object is passed and received from the server to get move information from opponent.
+ * @author Instructor
+ * @version 1.0
+ * @since February 10, 2020
+ */
 public class MoveData implements Serializable{
 	
+	/**
+	 * serialVersionUID for the serializable object
+	 */
 	private static final long serialVersionUID = 1;
-	private char oldMark;    //indicates mark of opponent player who just made a move
-	public char newMark;    //indicates the mark of the current player whose turn it is 
-	private int makeUpdate;     //integer corresponding to code on a switch board based on opponents move
-	private String name;   //name of opponent who just made their move
 	
+	/**
+	 * Indicates the mark of the player who just made their move.
+	 */
+	private char oldMark; 
 	
+	/**
+	 * Indicates the mark of the player who is going next.
+	 */
+	public char newMark;
+	
+	/**
+	 * Integer corresponding to code on a switch board based on opponents move
+	 */
+	private int makeUpdate;
+	
+	/**
+	 * Name of opponent who just made their move
+	 */
+	private String name;   
+	
+	/**
+	 * Overloaded constructor
+	 * @param name
+	 */
 	public MoveData(String name) {
 		this.name = name;
 	}
-	
+
+	/**
+	 * Overloaded constructor
+	 * @param makeUpdate
+	 */
 	public MoveData(int makeUpdate) {
 		this.makeUpdate = makeUpdate;
 	}
 	
+	/**
+	 * Overloaded constructor
+	 * @param oldMark
+	 * @param newMark
+	 * @param name
+	 * @param makeUpdate
+	 */
 	public MoveData(char oldMark, char newMark, String name, int makeUpdate) {
 		this.oldMark = oldMark;
 		this.newMark = newMark;

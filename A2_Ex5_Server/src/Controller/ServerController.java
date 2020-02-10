@@ -11,10 +11,18 @@ import Model.Game;
 import Model.MoveData;
 import Model.Player;
 
+/**
+ * Server controller class responsible for talking to the clients and sending and receving move objects.
+ * 
+ * @author Kush
+ * @version 1.0
+ * @since February 10, 2020
+ */
+
 public class ServerController {
 	
-	private Socket aSocket;   //a socket object
-	private ServerSocket serverSocket;   //server socket object
+	private Socket aSocket; 
+	private ServerSocket serverSocket; 
 	private ExecutorService pool;
 	
 	public ServerController() {
@@ -26,6 +34,9 @@ public class ServerController {
 		}
 	}
 	
+	/**
+	 * Runs the server. Accepts socket connections for clients and add players to the lobby. Creates a game instance on a thread for every two players who join.
+	 */
 	public void runServer() {
 		try {
 			ArrayList<Player> PlayerPair = new ArrayList<Player>(2);
