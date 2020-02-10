@@ -1,0 +1,411 @@
+2020/02/08 21:11:29 - Server Started
+2020/02/08 21:11:40 - Client Logged In
+2020/02/08 21:11:46 - Client Logged Out
+2020/02/08 21:26:13 - Server Started
+2020/02/08 21:26:18 - Client Logged In
+2020/02/08 21:26:24 - Remove Table: clients
+2020/02/08 21:26:30 - Client Logged Out
+2020/02/08 21:27:37 - Client Logged In
+2020/02/08 21:27:56 - Client Logged Out
+2020/02/08 21:28:44 - Client Logged In
+2020/02/08 21:28:56 - Client Logged Out
+2020/02/08 21:35:23 - Server Started
+2020/02/09 13:13:22 - Server Started
+2020/02/09 13:13:55 - Client Logged In
+2020/02/09 13:13:57 - Something has gone terribly wrong...
+2020/02/09 13:14:03 - Client Logged Out
+2020/02/09 13:15:40 - Server Started
+2020/02/09 13:17:07 - Server Started
+2020/02/09 13:17:12 - Client Logged In
+2020/02/09 13:17:28 - Client Logged Out
+2020/02/09 13:34:51 - Server Started
+2020/02/09 13:35:19 - Server Started
+2020/02/09 14:36:10 - Client Logged In
+2020/02/09 14:36:19 - Client Logged Out
+2020/02/09 15:58:08 - Admin Logged In
+2020/02/09 16:09:10 - Client Logged Out
+2020/02/09 16:09:12 - Client Logged Out
+2020/02/09 16:09:24 - SQL error while trying to get client records
+2020/02/09 16:09:28 - Client Logged Out
+2020/02/09 16:16:53 - Admin Logged In
+2020/02/09 16:17:11 - Remove Table: clients
+2020/02/09 16:22:29 - Admin Logged In
+2020/02/09 16:22:47 - Remove Table: clients
+2020/02/09 16:56:22 - Admin Logged In
+2020/02/09 16:56:24 - Database clientdb created
+2020/02/09 16:56:24 - Table clients created
+2020/02/09 16:56:25 - Added Client: 1001 Fred Flintstone C to table: clients
+2020/02/09 16:56:25 - Added Client: 1002 Bugs Bunny R to table: clients
+2020/02/09 16:56:25 - Added Client: 1003 Samuel Ludlow III C to table: clients
+2020/02/09 16:56:25 - Added Client: 1004 Bill Partley R to table: clients
+2020/02/09 16:56:25 - Added Client: 1005 Dr. Evil C to table: clients
+2020/02/09 16:56:25 - Added Client: 1006 Perky Volunteer R to table: clients
+2020/02/09 16:56:25 - Added Client: 1007 BobBob Never R to table: clients
+2020/02/09 16:56:25 - Added Client: 1008 Homer Simpson R to table: clients
+2020/02/09 16:56:25 - Added Client: 1009 Wilbur Wimp R to table: clients
+2020/02/09 16:56:25 - Added Client: 1010 Really Depressed R to table: clients
+2020/02/09 16:56:25 - Added Client: 1011 Sam Packitaway C to table: clients
+2020/02/09 16:56:25 - Added Client: 1012 Nurse Betty R to table: clients
+2020/02/09 16:56:25 - Added Client: 1013 Donald Duck C to table: clients
+2020/02/09 16:56:25 - Added Client: 1014 Joe Blow R to table: clients
+2020/02/09 16:56:25 - Added Client: 1015 Pebbles Flintstone C to table: clients
+2020/02/09 16:56:26 - Added Client: 1016 Barney Rubble C to table: clients
+2020/02/09 16:56:26 - Added Client: 1017 Huey Duck R to table: clients
+2020/02/09 16:56:26 - Added Client: 1018 Wylie Coyote C to table: clients
+2020/02/09 16:56:26 - Added Client: 1019 Foghorn Leghorn C to table: clients
+2020/02/09 16:56:26 - Added Client: 1020 Sylvester Cat R to table: clients
+2020/02/09 16:56:26 - Added Client: 1021 Annoying Dog R to table: clients
+2020/02/09 16:56:26 - Added Client: 1022 Bart Simpson C to table: clients
+2020/02/09 16:56:26 - Added Client: 1023 Betty Rubble C to table: clients
+2020/02/09 16:56:26 - Added Client: 1024 Big Chickenhawk C to table: clients
+2020/02/09 16:56:26 - Added Client: 1025 Marge Simpson R to table: clients
+2020/02/09 16:56:26 - Added Client: 1026 Tweetie Bird R to table: clients
+2020/02/09 16:56:26 - Added Client: 1027 The Other Road Runner R to table: clients
+2020/02/09 16:56:26 - Added Client: 1028 Wilma Flintstone R to table: clients
+2020/02/09 16:56:26 - Added Client: 1029 Pepi LePew C to table: clients
+2020/02/09 16:56:26 - Added Client: 1030 Luey Duck R to table: clients
+2020/02/09 16:56:27 - Added Client: 1031 Daffy Duck C to table: clients
+2020/02/09 16:56:27 - Added Client: 1032 The Buzzard R to table: clients
+2020/02/09 16:56:27 - Added Client: 1033 Maggie Simpson R to table: clients
+2020/02/09 16:56:27 - Added Client: 1034 Elmer Fudd C to table: clients
+2020/02/09 16:56:27 - Added Client: 1035 Maniana Gonzalas C to table: clients
+2020/02/09 16:56:27 - Added Client: 1036 Porky Pig R to table: clients
+2020/02/09 16:56:27 - Added Client: 1037 Bam Bam Rubble R to table: clients
+2020/02/09 16:56:27 - Added Client: 1038 Duey Duck C to table: clients
+2020/02/09 16:56:27 - Added Client: 1039 James Bond C to table: clients
+2020/02/09 16:56:27 - Added Client: 1040 The Road Runner R to table: clients
+2020/02/09 16:56:27 - Added Client: 1041 Mickey Mouse C to table: clients
+2020/02/09 16:56:27 - Added Client: 1042 Pluto Dog R to table: clients
+2020/02/09 16:56:27 - Added Client: 1043 Minney Mouse R to table: clients
+2020/02/09 16:56:27 - Added Client: 1044 Tasmainian Devil C to table: clients
+2020/02/09 16:56:28 - Added Client: 1045 Yosimety Sam C to table: clients
+2020/02/09 16:56:28 - Added Client: 1046 Another Road Runner R to table: clients
+2020/02/09 16:56:28 - Added Client: 1047 Speedy Gonzalas C to table: clients
+2020/02/09 16:56:28 - Added Client: 1048 More Fastus Road Runner C to table: clients
+2020/02/09 16:56:28 - Added Client: 1049 Barky Dog R to table: clients
+2020/02/09 16:56:28 - Added Client: 1050 Little Chickenhawk R to table: clients
+2020/02/09 16:56:28 - Added Client: 1051 Deputy Dog C to table: clients
+2020/02/09 16:56:28 - Added Client: 1052 Yogi Bear R to table: clients
+2020/02/09 16:56:28 - Added Client: 1053 Huckelberry Hound C to table: clients
+2020/02/09 16:56:28 - Added Client: 1054 Rocky Squirrel R to table: clients
+2020/02/09 16:56:28 - Added Client: 1055 Lisa Simpson C to table: clients
+2020/02/09 16:56:28 - Added Client: 1056 Lola Bunny R to table: clients
+2020/02/09 16:56:28 - Added Client: 1057 Melissa Duck C to table: clients
+2020/02/09 16:56:28 - Added Client: 1058 Petunia Pig R to table: clients
+2020/02/09 16:56:28 - Added Client: 1059 Penolope Pussycat C to table: clients
+2020/02/09 16:56:29 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 16:56:29 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 16:56:29 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 16:56:29 - Table clients populated
+2020/02/09 17:00:05 - Updated client 1062 Michigan Frog C in table: clients
+2020/02/09 17:00:12 - Updated client 1062 Michigan J. Frog C in table: clients
+2020/02/09 17:01:08 - Updated client 1062 Michigan Frog C in table: clients
+2020/02/09 17:01:14 - Updated client 1062 Michigan J. Frog C in table: clients
+2020/02/09 17:14:32 - DataBase Connection Error while checking for existing client
+2020/02/09 17:14:32 - Failed to add 1063 Bob Joe C to table: clients
+2020/02/09 17:14:59 - DataBase Connection Error while checking for existing client
+2020/02/09 17:14:59 - Failed to add 1064 Dude McCool C to table: clients
+2020/02/09 17:19:57 - SQL error while trying to get client records
+2020/02/09 17:20:05 - SQL error while trying to get client records
+2020/02/09 17:20:29 - Admin Logged In
+2020/02/09 17:20:31 - Database clientdb created
+2020/02/09 17:20:31 - Table clients created
+2020/02/09 17:20:31 - Table clients populated
+2020/02/09 17:21:20 - Updated client 1001 Bob Fakey R in table: clients
+2020/02/09 17:22:19 - Admin Logged In
+2020/02/09 17:22:21 - Database clientdb created
+2020/02/09 17:22:22 - Table clients created
+2020/02/09 17:22:22 - Added Client: 1001 Fred Flintstone C to table: clients
+2020/02/09 17:22:22 - Added Client: 1002 Bugs Bunny R to table: clients
+2020/02/09 17:22:22 - Added Client: 1003 Samuel Ludlow III C to table: clients
+2020/02/09 17:22:22 - Added Client: 1004 Bill Partley R to table: clients
+2020/02/09 17:22:22 - Added Client: 1005 Dr. Evil C to table: clients
+2020/02/09 17:22:22 - Added Client: 1006 Perky Volunteer R to table: clients
+2020/02/09 17:22:22 - Added Client: 1007 BobBob Never R to table: clients
+2020/02/09 17:22:22 - Added Client: 1008 Homer Simpson R to table: clients
+2020/02/09 17:22:22 - Added Client: 1009 Wilbur Wimp R to table: clients
+2020/02/09 17:22:22 - Added Client: 1010 Really Depressed R to table: clients
+2020/02/09 17:22:22 - Added Client: 1011 Sam Packitaway C to table: clients
+2020/02/09 17:22:22 - Added Client: 1012 Nurse Betty R to table: clients
+2020/02/09 17:22:23 - Added Client: 1013 Donald Duck C to table: clients
+2020/02/09 17:22:23 - Added Client: 1014 Joe Blow R to table: clients
+2020/02/09 17:22:23 - Added Client: 1015 Pebbles Flintstone C to table: clients
+2020/02/09 17:22:23 - Added Client: 1016 Barney Rubble C to table: clients
+2020/02/09 17:22:23 - Added Client: 1017 Huey Duck R to table: clients
+2020/02/09 17:22:23 - Added Client: 1018 Wylie Coyote C to table: clients
+2020/02/09 17:22:23 - Added Client: 1019 Foghorn Leghorn C to table: clients
+2020/02/09 17:22:23 - Added Client: 1020 Sylvester Cat R to table: clients
+2020/02/09 17:22:23 - Added Client: 1021 Annoying Dog R to table: clients
+2020/02/09 17:22:23 - Added Client: 1022 Bart Simpson C to table: clients
+2020/02/09 17:22:23 - Added Client: 1023 Betty Rubble C to table: clients
+2020/02/09 17:22:23 - Added Client: 1024 Big Chickenhawk C to table: clients
+2020/02/09 17:22:23 - Added Client: 1025 Marge Simpson R to table: clients
+2020/02/09 17:22:23 - Added Client: 1026 Tweetie Bird R to table: clients
+2020/02/09 17:22:24 - Added Client: 1027 The Other Road Runner R to table: clients
+2020/02/09 17:22:24 - Added Client: 1028 Wilma Flintstone R to table: clients
+2020/02/09 17:22:24 - Added Client: 1029 Pepi LePew C to table: clients
+2020/02/09 17:22:24 - Added Client: 1030 Luey Duck R to table: clients
+2020/02/09 17:22:24 - Added Client: 1031 Daffy Duck C to table: clients
+2020/02/09 17:22:24 - Added Client: 1032 The Buzzard R to table: clients
+2020/02/09 17:22:24 - Added Client: 1033 Maggie Simpson R to table: clients
+2020/02/09 17:22:24 - Added Client: 1034 Elmer Fudd C to table: clients
+2020/02/09 17:22:24 - Added Client: 1035 Maniana Gonzalas C to table: clients
+2020/02/09 17:22:24 - Added Client: 1036 Porky Pig R to table: clients
+2020/02/09 17:22:24 - Added Client: 1037 Bam Bam Rubble R to table: clients
+2020/02/09 17:22:24 - Added Client: 1038 Duey Duck C to table: clients
+2020/02/09 17:22:24 - Added Client: 1039 James Bond C to table: clients
+2020/02/09 17:22:24 - Added Client: 1040 The Road Runner R to table: clients
+2020/02/09 17:22:24 - Added Client: 1041 Mickey Mouse C to table: clients
+2020/02/09 17:22:25 - Added Client: 1042 Pluto Dog R to table: clients
+2020/02/09 17:22:25 - Added Client: 1043 Minney Mouse R to table: clients
+2020/02/09 17:22:25 - Added Client: 1044 Tasmainian Devil C to table: clients
+2020/02/09 17:22:25 - Added Client: 1045 Yosimety Sam C to table: clients
+2020/02/09 17:22:25 - Added Client: 1046 Another Road Runner R to table: clients
+2020/02/09 17:22:25 - Added Client: 1047 Speedy Gonzalas C to table: clients
+2020/02/09 17:22:25 - Added Client: 1048 More Fastus Road Runner C to table: clients
+2020/02/09 17:22:25 - Added Client: 1049 Barky Dog R to table: clients
+2020/02/09 17:22:25 - Added Client: 1050 Little Chickenhawk R to table: clients
+2020/02/09 17:22:25 - Added Client: 1051 Deputy Dog C to table: clients
+2020/02/09 17:22:25 - Added Client: 1052 Yogi Bear R to table: clients
+2020/02/09 17:22:25 - Added Client: 1053 Huckelberry Hound C to table: clients
+2020/02/09 17:22:25 - Added Client: 1054 Rocky Squirrel R to table: clients
+2020/02/09 17:22:25 - Added Client: 1055 Lisa Simpson C to table: clients
+2020/02/09 17:22:25 - Added Client: 1056 Lola Bunny R to table: clients
+2020/02/09 17:22:26 - Added Client: 1057 Melissa Duck C to table: clients
+2020/02/09 17:22:26 - Added Client: 1058 Petunia Pig R to table: clients
+2020/02/09 17:22:26 - Added Client: 1059 Penolope Pussycat C to table: clients
+2020/02/09 17:22:26 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 17:22:26 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 17:22:26 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 17:22:26 - Table clients populated
+2020/02/09 17:23:14 - Added Client: 1063 Dude McFake R to table: clients
+2020/02/09 17:24:27 - Added Client: 1064 Steve McLovin R to table: clients
+2020/02/09 17:33:47 - Added Client: 1065 Steve McLovin R to table: clients
+2020/02/09 17:34:00 - Updated client 1065 Steveven McLovin R in table: clients
+2020/02/09 17:34:02 - Added Client: 1066 Steve McLovin R to table: clients
+2020/02/09 17:42:11 - Admin Logged In
+2020/02/09 17:42:14 - Database clientdb created
+2020/02/09 17:42:14 - Table clients created
+2020/02/09 17:42:14 - Added Client: 1001 Fred Flintstone C to table: clients
+2020/02/09 17:42:14 - Added Client: 1002 Bugs Bunny R to table: clients
+2020/02/09 17:42:14 - Added Client: 1003 Samuel Ludlow III C to table: clients
+2020/02/09 17:42:14 - Added Client: 1004 Bill Partley R to table: clients
+2020/02/09 17:42:14 - Added Client: 1005 Dr. Evil C to table: clients
+2020/02/09 17:42:14 - Added Client: 1006 Perky Volunteer R to table: clients
+2020/02/09 17:42:14 - Added Client: 1007 BobBob Never R to table: clients
+2020/02/09 17:42:14 - Added Client: 1008 Homer Simpson R to table: clients
+2020/02/09 17:42:14 - Added Client: 1009 Wilbur Wimp R to table: clients
+2020/02/09 17:42:14 - Added Client: 1010 Really Depressed R to table: clients
+2020/02/09 17:42:14 - Added Client: 1011 Sam Packitaway C to table: clients
+2020/02/09 17:42:15 - Added Client: 1012 Nurse Betty R to table: clients
+2020/02/09 17:42:15 - Added Client: 1013 Donald Duck C to table: clients
+2020/02/09 17:42:15 - Added Client: 1014 Joe Blow R to table: clients
+2020/02/09 17:42:15 - Added Client: 1015 Pebbles Flintstone C to table: clients
+2020/02/09 17:42:15 - Added Client: 1016 Barney Rubble C to table: clients
+2020/02/09 17:42:15 - Added Client: 1017 Huey Duck R to table: clients
+2020/02/09 17:42:15 - Added Client: 1018 Wylie Coyote C to table: clients
+2020/02/09 17:42:15 - Added Client: 1019 Foghorn Leghorn C to table: clients
+2020/02/09 17:42:15 - Added Client: 1020 Sylvester Cat R to table: clients
+2020/02/09 17:42:15 - Added Client: 1021 Annoying Dog R to table: clients
+2020/02/09 17:42:15 - Added Client: 1022 Bart Simpson C to table: clients
+2020/02/09 17:42:15 - Added Client: 1023 Betty Rubble C to table: clients
+2020/02/09 17:42:15 - Added Client: 1024 Big Chickenhawk C to table: clients
+2020/02/09 17:42:15 - Added Client: 1025 Marge Simpson R to table: clients
+2020/02/09 17:42:15 - Added Client: 1026 Tweetie Bird R to table: clients
+2020/02/09 17:42:15 - Added Client: 1027 The Other Road Runner R to table: clients
+2020/02/09 17:42:15 - Added Client: 1028 Wilma Flintstone R to table: clients
+2020/02/09 17:42:16 - Added Client: 1029 Pepi LePew C to table: clients
+2020/02/09 17:42:16 - Added Client: 1030 Luey Duck R to table: clients
+2020/02/09 17:42:16 - Added Client: 1031 Daffy Duck C to table: clients
+2020/02/09 17:42:16 - Added Client: 1032 The Buzzard R to table: clients
+2020/02/09 17:42:16 - Added Client: 1033 Maggie Simpson R to table: clients
+2020/02/09 17:42:16 - Added Client: 1034 Elmer Fudd C to table: clients
+2020/02/09 17:42:16 - Added Client: 1035 Maniana Gonzalas C to table: clients
+2020/02/09 17:42:16 - Added Client: 1036 Porky Pig R to table: clients
+2020/02/09 17:42:16 - Added Client: 1037 Bam Bam Rubble R to table: clients
+2020/02/09 17:42:16 - Added Client: 1038 Duey Duck C to table: clients
+2020/02/09 17:42:16 - Added Client: 1039 James Bond C to table: clients
+2020/02/09 17:42:16 - Added Client: 1040 The Road Runner R to table: clients
+2020/02/09 17:42:16 - Added Client: 1041 Mickey Mouse C to table: clients
+2020/02/09 17:42:16 - Added Client: 1042 Pluto Dog R to table: clients
+2020/02/09 17:42:16 - Added Client: 1043 Minney Mouse R to table: clients
+2020/02/09 17:42:16 - Added Client: 1044 Tasmainian Devil C to table: clients
+2020/02/09 17:42:16 - Added Client: 1045 Yosimety Sam C to table: clients
+2020/02/09 17:42:17 - Added Client: 1046 Another Road Runner R to table: clients
+2020/02/09 17:42:17 - Added Client: 1047 Speedy Gonzalas C to table: clients
+2020/02/09 17:42:17 - Added Client: 1048 More Fastus Road Runner C to table: clients
+2020/02/09 17:42:17 - Added Client: 1049 Barky Dog R to table: clients
+2020/02/09 17:42:17 - Added Client: 1050 Little Chickenhawk R to table: clients
+2020/02/09 17:42:17 - Added Client: 1051 Deputy Dog C to table: clients
+2020/02/09 17:42:17 - Added Client: 1052 Yogi Bear R to table: clients
+2020/02/09 17:42:17 - Added Client: 1053 Huckelberry Hound C to table: clients
+2020/02/09 17:42:17 - Added Client: 1054 Rocky Squirrel R to table: clients
+2020/02/09 17:42:17 - Added Client: 1055 Lisa Simpson C to table: clients
+2020/02/09 17:42:17 - Added Client: 1056 Lola Bunny R to table: clients
+2020/02/09 17:42:17 - Added Client: 1057 Melissa Duck C to table: clients
+2020/02/09 17:42:17 - Added Client: 1058 Petunia Pig R to table: clients
+2020/02/09 17:42:17 - Added Client: 1059 Penolope Pussycat C to table: clients
+2020/02/09 17:42:17 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 17:42:17 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 17:42:17 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 17:42:17 - Table clients populated
+2020/02/09 17:42:34 - Admin Logged In
+2020/02/09 17:42:35 - Database clientdb created
+2020/02/09 17:42:35 - Table clients created
+2020/02/09 17:42:35 - Table clients populated
+2020/02/09 17:43:44 - Invalid Prepared Statement when trying to get client records
+2020/02/09 17:43:50 - Added Client: 1063 Dave McCool R to table: clients
+2020/02/09 17:44:03 - Admin Logged In
+2020/02/09 17:44:04 - Database clientdb created
+2020/02/09 17:44:04 - Table clients created
+2020/02/09 17:44:04 - Table clients populated
+2020/02/09 17:44:17 - Added Client: 1064 Dave McCool R to table: clients
+2020/02/09 17:44:50 - Admin Logged In
+2020/02/09 17:44:52 - Database clientdb created
+2020/02/09 17:44:52 - Table clients created
+2020/02/09 17:44:52 - Table clients populated
+2020/02/09 17:44:56 - Remove Table: clients
+2020/02/09 17:44:56 - Table clients created
+2020/02/09 17:44:56 - Added Client: 1001 Fred Flintstone C to table: clients
+2020/02/09 17:44:56 - Added Client: 1002 Bugs Bunny R to table: clients
+2020/02/09 17:44:57 - Added Client: 1003 Samuel Ludlow III C to table: clients
+2020/02/09 17:44:57 - Added Client: 1004 Bill Partley R to table: clients
+2020/02/09 17:44:57 - Added Client: 1005 Dr. Evil C to table: clients
+2020/02/09 17:44:57 - Added Client: 1006 Perky Volunteer R to table: clients
+2020/02/09 17:44:57 - Added Client: 1007 BobBob Never R to table: clients
+2020/02/09 17:44:57 - Added Client: 1008 Homer Simpson R to table: clients
+2020/02/09 17:44:57 - Added Client: 1009 Wilbur Wimp R to table: clients
+2020/02/09 17:44:57 - Added Client: 1010 Really Depressed R to table: clients
+2020/02/09 17:44:57 - Added Client: 1011 Sam Packitaway C to table: clients
+2020/02/09 17:44:57 - Added Client: 1012 Nurse Betty R to table: clients
+2020/02/09 17:44:57 - Added Client: 1013 Donald Duck C to table: clients
+2020/02/09 17:44:57 - Added Client: 1014 Joe Blow R to table: clients
+2020/02/09 17:44:57 - Added Client: 1015 Pebbles Flintstone C to table: clients
+2020/02/09 17:44:57 - Added Client: 1016 Barney Rubble C to table: clients
+2020/02/09 17:44:57 - Added Client: 1017 Huey Duck R to table: clients
+2020/02/09 17:44:58 - Added Client: 1018 Wylie Coyote C to table: clients
+2020/02/09 17:44:58 - Added Client: 1019 Foghorn Leghorn C to table: clients
+2020/02/09 17:44:58 - Added Client: 1020 Sylvester Cat R to table: clients
+2020/02/09 17:44:58 - Added Client: 1021 Annoying Dog R to table: clients
+2020/02/09 17:44:58 - Added Client: 1022 Bart Simpson C to table: clients
+2020/02/09 17:44:58 - Added Client: 1023 Betty Rubble C to table: clients
+2020/02/09 17:44:58 - Added Client: 1024 Big Chickenhawk C to table: clients
+2020/02/09 17:44:58 - Added Client: 1025 Marge Simpson R to table: clients
+2020/02/09 17:44:58 - Added Client: 1026 Tweetie Bird R to table: clients
+2020/02/09 17:44:58 - Added Client: 1027 The Other Road Runner R to table: clients
+2020/02/09 17:44:58 - Added Client: 1028 Wilma Flintstone R to table: clients
+2020/02/09 17:44:58 - Added Client: 1029 Pepi LePew C to table: clients
+2020/02/09 17:44:58 - Added Client: 1030 Luey Duck R to table: clients
+2020/02/09 17:44:58 - Added Client: 1031 Daffy Duck C to table: clients
+2020/02/09 17:44:58 - Added Client: 1032 The Buzzard R to table: clients
+2020/02/09 17:44:59 - Added Client: 1033 Maggie Simpson R to table: clients
+2020/02/09 17:44:59 - Added Client: 1034 Elmer Fudd C to table: clients
+2020/02/09 17:44:59 - Added Client: 1035 Maniana Gonzalas C to table: clients
+2020/02/09 17:44:59 - Added Client: 1036 Porky Pig R to table: clients
+2020/02/09 17:44:59 - Added Client: 1037 Bam Bam Rubble R to table: clients
+2020/02/09 17:44:59 - Added Client: 1038 Duey Duck C to table: clients
+2020/02/09 17:44:59 - Added Client: 1039 James Bond C to table: clients
+2020/02/09 17:44:59 - Added Client: 1040 The Road Runner R to table: clients
+2020/02/09 17:44:59 - Added Client: 1041 Mickey Mouse C to table: clients
+2020/02/09 17:44:59 - Added Client: 1042 Pluto Dog R to table: clients
+2020/02/09 17:44:59 - Added Client: 1043 Minney Mouse R to table: clients
+2020/02/09 17:44:59 - Added Client: 1044 Tasmainian Devil C to table: clients
+2020/02/09 17:44:59 - Added Client: 1045 Yosimety Sam C to table: clients
+2020/02/09 17:44:59 - Added Client: 1046 Another Road Runner R to table: clients
+2020/02/09 17:44:59 - Added Client: 1047 Speedy Gonzalas C to table: clients
+2020/02/09 17:45:00 - Added Client: 1048 More Fastus Road Runner C to table: clients
+2020/02/09 17:45:00 - Added Client: 1049 Barky Dog R to table: clients
+2020/02/09 17:45:00 - Added Client: 1050 Little Chickenhawk R to table: clients
+2020/02/09 17:45:00 - Added Client: 1051 Deputy Dog C to table: clients
+2020/02/09 17:45:00 - Added Client: 1052 Yogi Bear R to table: clients
+2020/02/09 17:45:00 - Added Client: 1053 Huckelberry Hound C to table: clients
+2020/02/09 17:45:00 - Added Client: 1054 Rocky Squirrel R to table: clients
+2020/02/09 17:45:00 - Added Client: 1055 Lisa Simpson C to table: clients
+2020/02/09 17:45:00 - Added Client: 1056 Lola Bunny R to table: clients
+2020/02/09 17:45:00 - Added Client: 1057 Melissa Duck C to table: clients
+2020/02/09 17:45:00 - Added Client: 1058 Petunia Pig R to table: clients
+2020/02/09 17:45:00 - Added Client: 1059 Penolope Pussycat C to table: clients
+2020/02/09 17:45:00 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 17:45:01 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 17:45:01 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 17:45:01 - Table clients populated
+2020/02/09 17:46:18 - Dropped client ID: 1062 in table clients
+2020/02/09 17:46:27 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 17:46:39 - Dropped client ID: 1062 in table clients
+2020/02/09 17:54:10 - Admin Logged In
+2020/02/09 17:54:12 - Database clientdb created
+2020/02/09 17:54:12 - Table clients created
+2020/02/09 17:54:12 - Added Client: 1001 Fred Flintstone C to table: clients
+2020/02/09 17:54:12 - Added Client: 1002 Bugs Bunny R to table: clients
+2020/02/09 17:54:12 - Added Client: 1003 Samuel Ludlow III C to table: clients
+2020/02/09 17:54:12 - Added Client: 1004 Bill Partley R to table: clients
+2020/02/09 17:54:13 - Added Client: 1005 Dr. Evil C to table: clients
+2020/02/09 17:54:13 - Added Client: 1006 Perky Volunteer R to table: clients
+2020/02/09 17:54:13 - Added Client: 1007 BobBob Never R to table: clients
+2020/02/09 17:54:13 - Added Client: 1008 Homer Simpson R to table: clients
+2020/02/09 17:54:13 - Added Client: 1009 Wilbur Wimp R to table: clients
+2020/02/09 17:54:13 - Added Client: 1010 Really Depressed R to table: clients
+2020/02/09 17:54:13 - Added Client: 1011 Sam Packitaway C to table: clients
+2020/02/09 17:54:13 - Added Client: 1012 Nurse Betty R to table: clients
+2020/02/09 17:54:13 - Added Client: 1013 Donald Duck C to table: clients
+2020/02/09 17:54:13 - Added Client: 1014 Joe Blow R to table: clients
+2020/02/09 17:54:13 - Added Client: 1015 Pebbles Flintstone C to table: clients
+2020/02/09 17:54:13 - Added Client: 1016 Barney Rubble C to table: clients
+2020/02/09 17:54:13 - Added Client: 1017 Huey Duck R to table: clients
+2020/02/09 17:54:13 - Added Client: 1018 Wylie Coyote C to table: clients
+2020/02/09 17:54:13 - Added Client: 1019 Foghorn Leghorn C to table: clients
+2020/02/09 17:54:13 - Added Client: 1020 Sylvester Cat R to table: clients
+2020/02/09 17:54:13 - Added Client: 1021 Annoying Dog R to table: clients
+2020/02/09 17:54:14 - Added Client: 1022 Bart Simpson C to table: clients
+2020/02/09 17:54:14 - Added Client: 1023 Betty Rubble C to table: clients
+2020/02/09 17:54:14 - Added Client: 1024 Big Chickenhawk C to table: clients
+2020/02/09 17:54:14 - Added Client: 1025 Marge Simpson R to table: clients
+2020/02/09 17:54:14 - Added Client: 1026 Tweetie Bird R to table: clients
+2020/02/09 17:54:14 - Added Client: 1027 The Other Road Runner R to table: clients
+2020/02/09 17:54:14 - Added Client: 1028 Wilma Flintstone R to table: clients
+2020/02/09 17:54:14 - Added Client: 1029 Pepi LePew C to table: clients
+2020/02/09 17:54:14 - Added Client: 1030 Luey Duck R to table: clients
+2020/02/09 17:54:14 - Added Client: 1031 Daffy Duck C to table: clients
+2020/02/09 17:54:14 - Added Client: 1032 The Buzzard R to table: clients
+2020/02/09 17:54:14 - Added Client: 1033 Maggie Simpson R to table: clients
+2020/02/09 17:54:14 - Added Client: 1034 Elmer Fudd C to table: clients
+2020/02/09 17:54:14 - Added Client: 1035 Maniana Gonzalas C to table: clients
+2020/02/09 17:54:14 - Added Client: 1036 Porky Pig R to table: clients
+2020/02/09 17:54:14 - Added Client: 1037 Bam Bam Rubble R to table: clients
+2020/02/09 17:54:14 - Added Client: 1038 Duey Duck C to table: clients
+2020/02/09 17:54:14 - Added Client: 1039 James Bond C to table: clients
+2020/02/09 17:54:15 - Added Client: 1040 The Road Runner R to table: clients
+2020/02/09 17:54:15 - Added Client: 1041 Mickey Mouse C to table: clients
+2020/02/09 17:54:15 - Added Client: 1042 Pluto Dog R to table: clients
+2020/02/09 17:54:15 - Added Client: 1043 Minney Mouse R to table: clients
+2020/02/09 17:54:15 - Added Client: 1044 Tasmainian Devil C to table: clients
+2020/02/09 17:54:15 - Added Client: 1045 Yosimety Sam C to table: clients
+2020/02/09 17:54:15 - Added Client: 1046 Another Road Runner R to table: clients
+2020/02/09 17:54:15 - Added Client: 1047 Speedy Gonzalas C to table: clients
+2020/02/09 17:54:15 - Added Client: 1048 More Fastus Road Runner C to table: clients
+2020/02/09 17:54:15 - Added Client: 1049 Barky Dog R to table: clients
+2020/02/09 17:54:15 - Added Client: 1050 Little Chickenhawk R to table: clients
+2020/02/09 17:54:15 - Added Client: 1051 Deputy Dog C to table: clients
+2020/02/09 17:54:15 - Added Client: 1052 Yogi Bear R to table: clients
+2020/02/09 17:54:15 - Added Client: 1053 Huckelberry Hound C to table: clients
+2020/02/09 17:54:15 - Added Client: 1054 Rocky Squirrel R to table: clients
+2020/02/09 17:54:15 - Added Client: 1055 Lisa Simpson C to table: clients
+2020/02/09 17:54:15 - Added Client: 1056 Lola Bunny R to table: clients
+2020/02/09 17:54:16 - Added Client: 1057 Melissa Duck C to table: clients
+2020/02/09 17:54:16 - Added Client: 1058 Petunia Pig R to table: clients
+2020/02/09 17:54:16 - Added Client: 1059 Penolope Pussycat C to table: clients
+2020/02/09 17:54:16 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 17:54:16 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 17:54:16 - Added Client: 1062 Michigan J. Frog C to table: clients
+2020/02/09 17:54:16 - Table clients populated
+2020/02/09 17:54:57 - Dropped client ID: 1062 in table clients
+2020/02/09 17:55:29 - Dropped client ID: 1061 in table clients
+2020/02/09 17:56:14 - Added Client: 1061 Marvin The Martian R to table: clients
+2020/02/09 17:56:29 - Dropped client ID: 1061 in table clients
+2020/02/09 18:01:15 - Dropped client ID: 1060 in table clients
+2020/02/09 18:01:57 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 18:04:31 - Dropped client ID: 1060 in table clients
+2020/02/09 18:04:39 - Added Client: 1060 Booboo Bear R to table: clients
+2020/02/09 18:05:12 - Added Client: 1063 Fake Dave R to table: clients
+2020/02/09 18:05:33 - Dropped client ID: 1063 in table clients
+2020/02/09 18:06:01 - Added Client: 1064 Dave McDood R to table: clients

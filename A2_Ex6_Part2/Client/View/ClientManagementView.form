@@ -1,0 +1,489 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="View.ClientManagementView">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+    <margin top="10" left="10" bottom="10" right="10"/>
+    <constraints>
+      <xy x="58" y="20" width="1235" height="815"/>
+    </constraints>
+    <properties>
+      <background color="-12170933"/>
+      <enabled value="true"/>
+      <focusable value="false"/>
+      <font name="Arial" size="12" style="1"/>
+      <foreground color="-4934476"/>
+    </properties>
+    <border type="bevel-raised" title-justification="2" title-position="2">
+      <font name="Arial Black" size="42" style="1"/>
+      <title-color color="-4473925"/>
+    </border>
+    <children>
+      <grid id="63576" binding="hostPanel" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-12170933"/>
+          <focusTraversalPolicyProvider value="false"/>
+          <focusable value="false"/>
+        </properties>
+        <border type="bevel-raised"/>
+        <children>
+          <grid id="8bccc" binding="searchPanel" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="2" hsize-policy="2" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="false"/>
+            </properties>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="43574" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="367" height="16"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="2"/>
+                  <horizontalTextPosition value="2"/>
+                  <text value="Search Results:"/>
+                </properties>
+              </component>
+              <scrollpane id="cdf48" binding="searchResultScroller">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="7" hsize-policy="7" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="268c3" class="javax.swing.JList" binding="searchResultsList">
+                    <constraints/>
+                    <properties>
+                      <font/>
+                      <model/>
+                      <name value=""/>
+                      <nextFocusableComponent value="85e37"/>
+                      <selectedIndex value="-1"/>
+                      <selectionMode value="0"/>
+                      <valueIsAdjusting value="true"/>
+                    </properties>
+                    <clientProperties>
+                      <List.isFileList class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                  </component>
+                </children>
+              </scrollpane>
+            </children>
+          </grid>
+          <grid id="abfac" binding="clientPanel" layout-manager="GridLayoutManager" row-count="10" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="10" vgap="10">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="1" row-span="2" col-span="1" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusable value="false"/>
+            </properties>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="71c17" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="238" height="53"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="24" style="1"/>
+                  <text value="Client Information"/>
+                </properties>
+              </component>
+              <component id="8be59" class="javax.swing.JTextField" binding="clientIDTextField">
+                <constraints>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="20"/>
+                  <editable value="false"/>
+                  <focusable value="false"/>
+                  <toolTipText value="The client's unique four (4) digit ID number."/>
+                </properties>
+              </component>
+              <component id="52ab9" class="javax.swing.JTextField" binding="lastNameTextField">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="20"/>
+                  <editable value="true"/>
+                  <nextFocusableComponent value="14a6c"/>
+                  <toolTipText value="20 Characters MAX"/>
+                </properties>
+              </component>
+              <component id="85e37" class="javax.swing.JTextField" binding="firstNameTextField">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="20"/>
+                  <editable value="true"/>
+                  <toolTipText value="20 Characters MAX"/>
+                </properties>
+              </component>
+              <component id="14a6c" class="javax.swing.JTextField" binding="addressTextField">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <columns value="30"/>
+                  <editable value="true"/>
+                  <nextFocusableComponent value="200b8"/>
+                  <toolTipText value="50 Characters MAX"/>
+                </properties>
+              </component>
+              <component id="1f8df" class="javax.swing.JComboBox" binding="clientTypeComboBox">
+                <constraints>
+                  <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="50" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <model>
+                    <item value="R"/>
+                    <item value="C"/>
+                  </model>
+                  <nextFocusableComponent value="62e66"/>
+                  <toolTipText value="(R) Resdidential&#10;(C) Commercial"/>
+                </properties>
+              </component>
+              <component id="b1400" class="javax.swing.JLabel" binding="clientIDLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Client ID: "/>
+                </properties>
+              </component>
+              <component id="2f779" class="javax.swing.JLabel" binding="firstNameLabel">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="First Name: "/>
+                </properties>
+              </component>
+              <component id="8b81a" class="javax.swing.JLabel" binding="lastNameLabel">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Last Name: "/>
+                </properties>
+              </component>
+              <component id="ecca0" class="javax.swing.JLabel" binding="addressLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Address: "/>
+                </properties>
+              </component>
+              <component id="2b845" class="javax.swing.JLabel" binding="postalCodeLabel">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Postal Code: "/>
+                </properties>
+              </component>
+              <component id="3b616" class="javax.swing.JLabel" binding="phoneNumberLabel">
+                <constraints>
+                  <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Phone Number: "/>
+                </properties>
+              </component>
+              <component id="72581" class="javax.swing.JLabel" binding="clientTypeLabel">
+                <constraints>
+                  <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="4"/>
+                  <horizontalTextPosition value="4"/>
+                  <text value="Client Type"/>
+                </properties>
+              </component>
+              <grid id="7ee1e" binding="clientButtonPanel" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="20" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
+                <constraints>
+                  <grid row="9" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <component id="62e66" class="javax.swing.JButton" binding="saveButton">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="30" height="10"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <horizontalAlignment value="0"/>
+                      <horizontalTextPosition value="0"/>
+                      <nextFocusableComponent value="bc86c"/>
+                      <text value="Save Changes / Add New Client"/>
+                      <toolTipText value="Save the above changes to the existing client's profile / Add new client to the database"/>
+                    </properties>
+                  </component>
+                  <component id="bc86c" class="javax.swing.JButton" binding="deleteButton">
+                    <constraints>
+                      <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false">
+                        <minimum-size width="10" height="5"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <nextFocusableComponent value="556e6"/>
+                      <text value=" Delete Client"/>
+                      <toolTipText value="Delete this client's profile"/>
+                    </properties>
+                  </component>
+                  <component id="556e6" class="javax.swing.JButton" binding="clearButton">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                        <minimum-size width="10" height="5"/>
+                      </grid>
+                    </constraints>
+                    <properties>
+                      <nextFocusableComponent value="344c6"/>
+                      <text value="Clear All Fields"/>
+                      <toolTipText value="Clear the above form"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <component id="193f" class="javax.swing.JTextField" binding="phoneNumTF">
+                <constraints>
+                  <grid row="7" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <columns value="12"/>
+                  <nextFocusableComponent value="1f8df"/>
+                  <toolTipText value="Format: 123-456-7890"/>
+                </properties>
+              </component>
+              <component id="c38d" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="9" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial" size="14" style="0"/>
+                  <text value="Client ID numbers are assigned by the system"/>
+                  <verticalAlignment value="1"/>
+                  <verticalTextPosition value="1"/>
+                </properties>
+              </component>
+              <component id="200b8" class="javax.swing.JTextField" binding="postalCodeTF">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="-1"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <columns value="7"/>
+                  <nextFocusableComponent value="193f"/>
+                  <toolTipText value="Format: 8X8 X8X"/>
+                </properties>
+              </component>
+            </children>
+          </grid>
+          <grid id="b04c1" binding="searchClientPanel" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                <preferred-size width="609" height="366"/>
+              </grid>
+            </constraints>
+            <properties>
+              <focusCycleRoot value="false"/>
+              <focusable value="false"/>
+            </properties>
+            <border type="bevel-raised"/>
+            <children>
+              <component id="c199e" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="24" style="1"/>
+                  <text value="Search Client"/>
+                </properties>
+              </component>
+              <component id="972b" class="javax.swing.JLabel" binding="selectSearchLabel">
+                <constraints>
+                  <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="367" height="16"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="2"/>
+                  <horizontalTextPosition value="2"/>
+                  <text value="Select type of search to be performed:"/>
+                </properties>
+              </component>
+              <component id="344c6" class="javax.swing.JRadioButton" binding="clientIDRadioButton">
+                <constraints>
+                  <grid row="2" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <focusCycleRoot value="false"/>
+                  <font name="Arial Black" size="18" style="1"/>
+                  <nextFocusableComponent value="fcec5"/>
+                  <selected value="true"/>
+                  <text value="Client ID"/>
+                  <toolTipText value="Search by the client's unique ID number"/>
+                </properties>
+              </component>
+              <component id="101cc" class="javax.swing.JRadioButton" binding="lastNameRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="3" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="18" style="1"/>
+                  <nextFocusableComponent value=""/>
+                  <selected value="false"/>
+                  <text value="Last Name"/>
+                  <toolTipText value="Search by the client's last name"/>
+                </properties>
+              </component>
+              <component id="a8c8d" class="javax.swing.JRadioButton" binding="clientTypeRadioButton" default-binding="true">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="3" anchor="8" fill="0" indent="5" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <font name="Arial Black" size="18" style="1"/>
+                  <nextFocusableComponent value=""/>
+                  <text value="Client Type"/>
+                  <toolTipText value="Search by the type of client: Residential (R) or Commercial (C)"/>
+                </properties>
+              </component>
+              <component id="4f62" class="javax.swing.JLabel" binding="searchParamLabel">
+                <constraints>
+                  <grid row="5" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="8" fill="2" indent="0" use-parent-layout="false">
+                    <preferred-size width="367" height="16"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <focusable value="false"/>
+                  <font name="Arial Black" size="18" style="0"/>
+                  <horizontalAlignment value="2"/>
+                  <horizontalTextPosition value="2"/>
+                  <text value="Enter the search parameter below:"/>
+                </properties>
+              </component>
+              <component id="fcec5" class="javax.swing.JTextField" binding="searchParamTextField">
+                <constraints>
+                  <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="4" fill="0" indent="5" use-parent-layout="false">
+                    <minimum-size width="30" height="-1"/>
+                    <preferred-size width="304" height="30"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <columns value="20"/>
+                  <nextFocusableComponent value="c7e3e"/>
+                </properties>
+                <clientProperties>
+                  <caretWidth class="java.lang.Integer" value="1"/>
+                  <html.disable class="java.lang.Boolean" value="false"/>
+                </clientProperties>
+              </component>
+              <component id="c7e3e" class="javax.swing.JButton" binding="searchButton" default-binding="true">
+                <constraints>
+                  <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <nextFocusableComponent value="d8618"/>
+                  <selected value="false"/>
+                  <text value="Search"/>
+                </properties>
+              </component>
+              <component id="d8618" class="javax.swing.JButton" binding="clearSearchButton" default-binding="true">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <nextFocusableComponent value="268c3"/>
+                  <text value="Clear Search"/>
+                </properties>
+              </component>
+              <hspacer id="dc325">
+                <constraints>
+                  <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+              </hspacer>
+            </children>
+          </grid>
+        </children>
+      </grid>
+      <component id="db507" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-4934476"/>
+          <focusable value="false"/>
+          <font name="Arial Black" size="28" style="1"/>
+          <foreground color="-4934476"/>
+          <text value="Client Management Screen"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+  <buttonGroups>
+    <group name="clientTypeRBMenu" bound="true">
+      <member id="344c6"/>
+      <member id="344c6"/>
+      <member id="a8c8d"/>
+      <member id="101cc"/>
+    </group>
+  </buttonGroups>
+</form>
