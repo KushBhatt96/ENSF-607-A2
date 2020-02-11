@@ -7,6 +7,7 @@ import Control.AdminController;
 import Model.DBManager;
 import View.AdminView;
 
+import javax.swing.*;
 import java.awt.*;
 import java.rmi.NotBoundException;
 import java.rmi.RemoteException;
@@ -33,6 +34,9 @@ public class AdminApp {
 
         } catch (RemoteException | NotBoundException e) {
             System.err.println("Client exception: " + e.toString());
+            JOptionPane.showMessageDialog(null,"App Server Down!" +
+                            "\n\n Please contact Matthew Vanderwey (matthew.vanderwey@ucalgary.ca)\n",
+                    "App Server Failure!", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

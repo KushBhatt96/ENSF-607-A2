@@ -66,10 +66,27 @@ public class ClientManController {
 
         // Add a ActionListener to the search results JList
         cmv.addSearchResultsListener(new SearchResultsListener());
+
+        // Check that the Database is running correctly
+        try {
+            if (!dbm.isSetupOK()) {
+                JOptionPane.showMessageDialog(cmv,"The database is not configured correctly" +
+                        "\nPlease run the Admin App", "Database Setup Error",
+                        JOptionPane.WARNING_MESSAGE);
+                System.exit(-8);
+            } else if(!dbm.isMySQLServerUp()) {
+                JOptionPane.showMessageDialog(cmv,"The MySQL server is down" +
+                                "\nPlease run the Admin App", "Database Setup Error",
+                        JOptionPane.WARNING_MESSAGE);
+                System.exit(-9);
+            }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
     }
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
-    // Helper Methods
+    // Helper Methods (User Input Validation)
 
     /**
      * Validates the attributes of a client object.
@@ -201,27 +218,34 @@ public class ClientManController {
 
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Clear the previous search results
-            cmv.deleteSearchResults();
+            updateSearchResults();
+        }
+    }
 
-            ArrayList<Client> searchResults = new ArrayList<>();
-            try {
-                searchResults = dbm.searchResults(
-                        cmv.getClientRadioButton(),
-                        cmv.getSearchParamTextField());
-            } catch (RemoteException ex) {
-                ex.printStackTrace();
-            }
+    /**
+     * Updates the search results pain.
+     */
+    private void updateSearchResults() {
+        // Clear the previous search results
+        cmv.deleteSearchResults();
 
-            if (searchResults.isEmpty()) {
-                JOptionPane.showMessageDialog(cmv,
-                        "No Records Found!\n\nPlease double check your selected Search Type\n" +
-                                "and Search Parameter!");
-            }
+        ArrayList<Client> searchResults = new ArrayList<>();
+        try {
+            searchResults = dbm.searchResults(
+                    cmv.getClientRadioButton(),
+                    cmv.getSearchParamTextField());
+        } catch (RemoteException ex) {
+            ex.printStackTrace();
+        }
 
-            for (Client c : searchResults) {
-                cmv.appendSearchResultsList(c);
-            }
+        if (searchResults.isEmpty()) {
+            JOptionPane.showMessageDialog(cmv,
+                    "No Records Found!\n\nPlease double check your selected Search Type\n" +
+                            "and Search Parameter!");
+        }
+
+        for (Client c : searchResults) {
+            cmv.appendSearchResultsList(c);
         }
     }
 
@@ -280,14 +304,17 @@ public class ClientManController {
                                     "The record for Client ID: " + selected.getID() +
                                             " has changed since it was selected." +
                                             "\nDo you wish wish to still update this record?" +
-                                            "\n\nIf not, please re-run your search to load the updated record.",
+                                            "\n\nIf not, please review the updated search results.",
                                     "Client Info Update Confirmation",
                                     JOptionPane.YES_NO_OPTION,
                                     JOptionPane.QUESTION_MESSAGE,
                                     null,
                                     null,
                                     JOptionPane.NO_OPTION);
-                            if (confirm != 0) return;
+                            if (confirm != 0) {
+                                updateSearchResults();
+                                return;
+                            }
                         } else if (!dbm.isChanged(modClient)) {
                             JOptionPane.showMessageDialog(cmv, "The current record in the database for Client ID: "
                                     + modClient.getID() + " is identical to the current form." +

@@ -36,7 +36,7 @@
           </grid>
         </children>
       </grid>
-      <grid id="e3588" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="20" vgap="-1">
+      <grid id="e3588" layout-manager="GridLayoutManager" row-count="3" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="20" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
           <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -44,7 +44,7 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="bf936" class="javax.swing.JLabel">
+          <component id="bf936" class="javax.swing.JLabel" binding="setupDBJL">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -58,6 +58,54 @@
           <component id="4d72" class="javax.swing.JTextField" binding="dBTF">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="750" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <columns value="50"/>
+              <editable value="false"/>
+              <font name="Consolas" size="14" style="1"/>
+              <horizontalAlignment value="2"/>
+            </properties>
+          </component>
+          <component id="d0ff1" class="javax.swing.JLabel" binding="SetupTableJL">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <horizontalAlignment value="4"/>
+              <horizontalTextPosition value="4"/>
+              <text value="Connected to Table"/>
+            </properties>
+          </component>
+          <component id="6a329" class="javax.swing.JLabel" binding="fromFileJL">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="14"/>
+              <horizontalAlignment value="4"/>
+              <horizontalTextPosition value="4"/>
+              <text value="Connected to Table"/>
+            </properties>
+          </component>
+          <component id="35fbc" class="javax.swing.JTextField" binding="tableNameTF">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <minimum-size width="750" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <columns value="50"/>
+              <editable value="false"/>
+              <font name="Consolas" size="14" style="1"/>
+              <horizontalAlignment value="2"/>
+            </properties>
+          </component>
+          <component id="8402a" class="javax.swing.JTextField" binding="fileNameTF">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false">
                 <minimum-size width="750" height="-1"/>
               </grid>
             </constraints>

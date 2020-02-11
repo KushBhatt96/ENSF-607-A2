@@ -24,10 +24,27 @@ public class AdminController {
 
         adminView.addGoButtonListener(new GoListener());
 
-        // Activate a database setup dialog
-        adminView.addConnectButtonListener(new ConnectListener());
-        adminView.addCancelButtonListener(ae -> System.exit(0));
-        adminView.setSetupDBDialogVisible(true);
+        try {
+            // If the DB is not already setup, launch the DB Setup dialogs
+            if (!dbm.isSetupOK()) {
+                adminView.addConnectButtonListener(new ConnectListener());
+                adminView.addCancelButtonListener(ae -> System.exit(0));
+                adminView.setSetupDBDialogVisible(true);
+            }
+            // If the MySQL Server is down, reset it
+            else if (!dbm.isMySQLServerUp()) {
+                // Reset the connection
+                dbm.shutdownDB();
+                // Setup the database schema
+                dbm.createDB();
+                // Create the Table
+                dbm.createTable();
+                // Populate the Table
+                dbm.fillTable();
+            }
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -37,8 +54,8 @@ public class AdminController {
     private class ConnectListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
-            // Establish the Database Connection
             try {
+                // Establish the Database Connection
                 dbm.setupConnection(
                         adminView.getUrl(),
                         adminView.getUserName(),
@@ -46,32 +63,13 @@ public class AdminController {
                         adminView.getDBName(),
                         adminView.getTableName(),
                         adminView.getFileName());
-            } catch (RemoteException ex) {
-                ex.printStackTrace();
-            }
-
-            // Create a new DB, or use the existing one
-            try {
+                // Setup the database schema
                 dbm.createDB();
-            } catch (RemoteException ex) {
-                ex.printStackTrace();
-            }
-
-            // Create a new table, or use the existing one
-            try {
+                // Create the Table
                 dbm.createTable();
-            } catch (RemoteException ex) {
-                ex.printStackTrace();
-            }
-
-            // Add the clients in clients.txt to the database
-            try {
+                // Populate the Table
                 dbm.fillTable();
-            } catch (RemoteException ex) {
-                ex.printStackTrace();
-            }
 
-            try {
                 if (!dbm.isSetupOK())
                     JOptionPane.showMessageDialog(adminView,
                             "Database setup has failed!" +
@@ -80,14 +78,14 @@ public class AdminController {
                             "Setup Failure", JOptionPane.ERROR_MESSAGE);
                 else {
                     // Add Listeners to the DBStatusDialog buttons
-                    adminView.addProceedActionListener(ae -> {
-                        adminView.disposeSetupDBDialog();
-                        adminView.disposeDBStatusDialog();
-                    });
+                    adminView.addProceedActionListener(ae -> System.exit(0));
 
                     // Populate the textFields in the DBStatusDialog
                     adminView.setdBTF(dbm.getConnectionInfo());
+                    adminView.setTableTF(dbm.getTableName());
+                    adminView.setFileTF(dbm.getFileName());
 
+                    // Make the status dialog visible
                     adminView.setDBStatusDialogVisible(true);
                 }
             } catch (RemoteException ex) {

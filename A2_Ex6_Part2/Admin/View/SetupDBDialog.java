@@ -53,7 +53,6 @@ public class SetupDBDialog extends JDialog {
         setResizable(false);
         getRootPane().setDefaultButton(connectButton);
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-
     }
 
     ///////////////////////////////////////////////////////////////////

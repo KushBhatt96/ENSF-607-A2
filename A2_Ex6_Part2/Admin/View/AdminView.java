@@ -13,8 +13,7 @@ import java.awt.event.ActionListener;
  * @version 2.0
  * @since 2020-02-07
  * <p>
- * This class creates the main View in the client management system
- * for Lab 08.
+ * This class creates the main View for the Client Management System Admin Application
  * <p>
  * Please note that I built this GUI using the Swing UI Designer in IntelliJ IDEA,
  * which creates the final JFrame using the attached XML file: "AdminView.form".
@@ -114,6 +113,14 @@ public class AdminView extends JFrame {
 
     public void setdBTF(String dataBase) {
         dbStatusDialog.setdBTF(dataBase);
+    }
+
+    public void setTableTF(String table) {
+        dbStatusDialog.setTableNameTF(table);
+    }
+
+    public void setFileTF(String fileName) {
+        dbStatusDialog.setFileNameTF(fileName);
     }
 
 

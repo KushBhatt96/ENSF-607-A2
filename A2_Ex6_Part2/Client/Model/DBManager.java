@@ -5,10 +5,22 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 
 public interface DBManager extends Remote {
+    /**
+     *
+     * @return Current URL of database MySQL server
+     */
     String getConnectionInfo() throws RemoteException;
 
+    /**
+     *
+     * @return name of database source/backup file
+     */
     String getFileName() throws RemoteException;
 
+    /**
+     *
+     * @return name of current table in use by client app
+     */
     String getTableName() throws RemoteException;
 
     /**
@@ -95,6 +107,12 @@ public interface DBManager extends Remote {
      * @return true if it has, otherwise false
      */
     boolean isSetupOK() throws RemoteException;
+
+    /**
+     * Checks if the MySQL server is up
+     * @return true if it is, otherwise false
+     */
+    boolean isMySQLServerUp() throws RemoteException;
 
     /**
      * Public wrapper for the closeConnection helper method.

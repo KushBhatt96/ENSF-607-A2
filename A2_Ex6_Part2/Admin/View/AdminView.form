@@ -61,7 +61,7 @@
                 <properties>
                   <font name="Arial Black" size="18" style="1"/>
                   <nextFocusableComponent value="101cc"/>
-                  <selected value="true"/>
+                  <selected value="false"/>
                   <text value="Backup Current Database"/>
                   <toolTipText value="Search by the client's unique ID number"/>
                 </properties>
@@ -73,6 +73,7 @@
                 <properties>
                   <font name="Arial Black" size="18" style="1"/>
                   <nextFocusableComponent value="c7e3e"/>
+                  <selected value="true"/>
                   <text value="Restore Database"/>
                   <toolTipText value="Search by the client's last name"/>
                 </properties>

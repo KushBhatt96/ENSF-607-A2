@@ -4,18 +4,22 @@
 
 Please note the following regarding the attached Java source files:
 
-	Under the Server package, if you run the StartServer.bat/.sh file, it will start the server locally on your machine.
-		
-	HOWEVER: 
-		Both the Client and Admin packages are currently setup to contact a sever already deployed on AWS.
-		Please feel free to experiment with opening as many Clients as you like using the provided JAR file.
-		
-	The Admin app is ONLY required to initialize, reset and backup the database.
-
-	The Swing GUIs for both the Client and Admin Packages were built using IntelliJ IDEA and therefore will not compile correctly
-	outside of that IDE.  To run these packages, please execute the provided JAR files.  They will connect with the server deployed
-	on AWS.  
+	The server for this application has already been deployed on AWS, 
+	so there is no need to run the server locally on your machine.  
+	However, if you still wish to do so, please use the provided script 
+	StartServer.bat/.sh under the Server package.
 	
+	Since the Swing GUIs for both the Client and Admin Packages were 
+	built using IntelliJ IDEA they will not compile correctly outside 
+	of that IDE. To run these packages, please execute the provided 
+	JAR files.  They will connect with the server deployed on AWS.
+
+	PLEASE NOTE:
+		You must run the Admin app first in order to initialize the 
+		MySQL database.  After that is done, you can run the Client app.
+		If at any time the database becomes corrupt, you can use the 
+		Admin app to restore it.  It can also be used to back-up the current
+		
 	Thank you,
 		Kush Bhatt & 
 		Matthew Vanderwey

@@ -34,7 +34,7 @@ public class Server implements DBManager {
 
     public Server() {
         // Setup the server data logger
-        dataLogger = new DataLogger("message_log.txt","yyyy/MM/dd HH:mm:ss");
+        dataLogger = new DataLogger("message_log.txt", "yyyy/MM/dd HH:mm:ss");
 
         // Initially set all setup validation flags to false
         dbConnectOK = false;
@@ -78,9 +78,11 @@ public class Server implements DBManager {
     @Override
     public void setupConnection(String connectionInfo, String login, String password,
                                 String DBName, String tableName, String fileName) {
+
+        // Log that the admin has logged in
         dataLogger.writeToMessageLog("Admin Logged In");
 
-        // Establish connection details from the user
+        // Establish connection details from the Admin
         this.connectionInfo = connectionInfo;
         this.login = login;
         this.password = password;
@@ -92,7 +94,7 @@ public class Server implements DBManager {
             // This is the package location for the MySQL driver that this application uses
             Class.forName("com.mysql.jdbc.Driver");
             connection = DriverManager.getConnection(connectionInfo, login, password);
-
+            dataLogger.writeToMessageLog("Connected to: " + connectionInfo);
         } catch (SQLException | ClassNotFoundException sqlEx) {
             dataLogger.writeToMessageLog("Cannot connect to: " + connectionInfo);
             sqlEx.printStackTrace();
@@ -115,7 +117,8 @@ public class Server implements DBManager {
                     preparedStatement = connection.prepareStatement(newDB);
                     preparedStatement.executeUpdate();
                 }
-                connection = updateConnection(connectionInfo, DBName);
+                if(!dbConnectOK)
+                    connection = updateConnection(connectionInfo, DBName);
                 dbConnectOK = true;
                 dataLogger.writeToMessageLog("Database " + DBName + " created");
             }
@@ -134,7 +137,6 @@ public class Server implements DBManager {
      */
     @Override
     public void createTable() {
-
         String sql = "CREATE TABLE " + tableName + " (" +
                 "id INT(4) NOT NULL, " +
                 "firstname VARCHAR(20) NOT NULL, " +
@@ -155,25 +157,6 @@ public class Server implements DBManager {
             }
         } catch (SQLException e) {
             dataLogger.writeToMessageLog("Failed to create new table" + tableName);
-            e.printStackTrace();
-        }
-
-    }
-
-    /**
-     * Removes the table (and its contents) from the database.
-     */
-    @Override
-    public void removeTable() {
-        String sql = "DROP TABLE " + tableName;
-        try {
-            preparedStatement = connection.prepareStatement(sql);
-            preparedStatement.executeUpdate();
-            tableFillOK = setTableOK = false;
-            Client.resetBaseID();
-            dataLogger.writeToMessageLog("Remove Table: " + tableName);
-        } catch (SQLException e) {
-            dataLogger.writeToMessageLog("Failed to Remove Table: " + tableName);
             e.printStackTrace();
         }
     }
@@ -207,6 +190,24 @@ public class Server implements DBManager {
             dataLogger.writeToMessageLog("File " + fileName + " Not Found!");
         } catch (Exception e) {
             dataLogger.writeToMessageLog("Something has gone terribly wrong while filling the table");
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Removes the table (and its contents) from the database.
+     */
+    @Override
+    public void removeTable() {
+        String sql = "DROP TABLE " + tableName;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.executeUpdate();
+            tableFillOK = setTableOK = false;
+            Client.resetBaseID();
+            dataLogger.writeToMessageLog("Remove Table: " + tableName);
+        } catch (SQLException e) {
+            dataLogger.writeToMessageLog("Failed to Remove Table: " + tableName);
             e.printStackTrace();
         }
     }
@@ -298,7 +299,7 @@ public class Server implements DBManager {
                 preparedStatement.setString(5, client.getPhoneNum());
                 preparedStatement.setString(6, client.getClientType());
                 preparedStatement.executeUpdate();
-                dataLogger.writeToMessageLog("Updated client "+ client + " in table: " + tableName);
+                dataLogger.writeToMessageLog("Updated client " + client + " in table: " + tableName);
             } catch (SQLException e) {
                 dataLogger.writeToMessageLog("Failed to update " + client + " in table: " + tableName);
                 e.printStackTrace();
@@ -380,7 +381,24 @@ public class Server implements DBManager {
      */
     @Override
     public boolean isSetupOK() {
-        return dbConnectOK && setTableOK && tableFillOK;
+        dataLogger.writeToMessageLog("Client logged into system");
+        // Check if the database has already been setup
+        if (!(dbConnectOK && setTableOK && tableFillOK)) {
+            dataLogger.writeToMessageLog("Database connection not yet configured");
+            return false;
+        }
+        dataLogger.writeToMessageLog("Database checks OK");
+        return true;
+    }
+
+    /**
+     * Checks if the MySQL server is up
+     * @return true if it is, otherwise false
+     */
+    @Override
+    public boolean isMySQLServerUp() {
+        if(!isDBExist()) return false;
+        return true;
     }
 
     /**
@@ -444,7 +462,7 @@ public class Server implements DBManager {
                 }
             }
         } catch (SQLException sqlEx) {
-            dataLogger.writeToMessageLog("DataBase Connection Error");
+            dataLogger.writeToMessageLog("DataBase Connection Error while searching for " + DBName);
             sqlEx.printStackTrace();
         }
         return false;

@@ -23,6 +23,11 @@ public class DBStatusDialog extends JDialog {
     private JPanel contentPane;
     private JButton buttonProceed;
     private JTextField dBTF;
+    private JTextField tableNameTF;
+    private JLabel setupDBJL;
+    private JLabel SetupTableJL;
+    private JLabel fromFileJL;
+    private JTextField fileNameTF;
 
     //////////////////////////////////////////////////////////////////
     // Constructor
@@ -44,6 +49,13 @@ public class DBStatusDialog extends JDialog {
         dBTF.setText(dataBase);
     }
 
+    void setTableNameTF(String table) {
+        tableNameTF.setText(table);
+    }
+
+    void setFileNameTF(String fileName) {
+        fileNameTF.setText(fileName);
+    }
 
     //////////////////////////////////////////////////////////////////
     // Add Action Listeners
