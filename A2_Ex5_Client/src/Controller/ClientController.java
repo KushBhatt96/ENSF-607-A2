@@ -16,7 +16,8 @@ import View.BoardView;
  * @since February 10, 2020
  */
 public class ClientController {
-
+	
+// INSTANCE VARIABLES:------------------------------------------------------------------------------------------------
 	private Socket aSocket;
 	private ObjectOutputStream socketOut;
 	private ObjectInputStream socketIn;
@@ -25,6 +26,8 @@ public class ClientController {
 	private char currentMark;
 	private static BoardView boardView;
 
+	
+// CONSTRUCTOR:------------------------------------------------------------------------------------------------
 	public ClientController(String serverName, int portNumber) {
 		try {
 			aSocket = new Socket(serverName, portNumber);
@@ -38,7 +41,8 @@ public class ClientController {
 		}
 	}
 	
-
+	
+// INSTANCE METHODS:--------------------------------------------------------------------------------------------
 	/**
 	 * Method that waits for a serializable that contains the move data from the opponent.
 	 */
@@ -47,7 +51,6 @@ public class ClientController {
 		try {
 			System.out.println("Waiting for opponent...");
 			MoveData move = (MoveData) socketIn.readObject();
-			//System.out.println(move.getResponse());
 			UpdateGUI(move);
 		} catch (IOException e) {
 			e.printStackTrace();
@@ -58,7 +61,7 @@ public class ClientController {
 	}
 	
 	/**
-	 * Method responsible for updating the GUI.
+	 * Switch board responsible for updating the GUI.
 	 * @param move
 	 */
 	public void UpdateGUI(MoveData move) {
@@ -179,7 +182,7 @@ public class ClientController {
 	}
 
 
-
+// GETTERS AND SETTERS:----------------------------------------------------------------------------------
 	public char getClientMark() {
 		return clientMark;
 	}

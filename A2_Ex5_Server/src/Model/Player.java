@@ -13,27 +13,30 @@ import java.net.Socket;
  */
 public class Player implements Constants{
 
+// INSTANCE VARIABLES:------------------------------------------------------------------------------------------------
 	/**
 	 * Name of the player
 	 */
 	private String name;
 
 	/**
-	 * Game board the player will play on
-	 */
-	/**
 	 * The opponent Player object
 	 */
 	private Player opponent;
+	
 	/**
 	 * The mark this player will be using
 	 */
 	private char mark;
+	
 	private Socket aSocket;
+	
 	private ObjectInputStream socketIn;
 
-
 	private ObjectOutputStream socketOut;
+	
+// CONSTRUCTOR:------------------------------------------------------------------------------------------------
+	
 	/**
 	 * Constructs the player and gives him/her a name and a mark.
 	 * @param name Name of the player
@@ -49,7 +52,11 @@ public class Player implements Constants{
 		}
 	}
 	
-	public void retrieveName() {     //Obtain each players name as they input it in the greeting box
+// INSTANCE METHODS:--------------------------------------------------------------------------------------------
+	/**
+	 * Obtain the name of each player and set it appropriately on the server.
+	 */
+	public void retrieveName() {
 		try {
 			MoveData moveIn = (MoveData) socketIn.readObject();
 			name = moveIn.getName();
@@ -61,6 +68,10 @@ public class Player implements Constants{
 		}
 	}
 	
+	
+	/**
+	 * Let each player know the name of their opponent.
+	 */
 	public void initiate() {
 		MoveData moveOut = new MoveData('X', mark, opponent.getName(), 0);
 		try {
@@ -70,51 +81,36 @@ public class Player implements Constants{
 		}
 	}
 	
+	
 	/**
 	 * The Play method checks the board first to see if anyone has won, or if the 
 	 * game has ended in a tie. If not, it will proceed to allow a player to make a move
 	 * by called makeMove method.
 	 */
-
-	
-	
 	public void play(Board theBoard) {
 		try {
-			//reading the current players input
+			// Reading in the current players input
 			MoveData moveIn = (MoveData) socketIn.readObject();
 			if(moveIn.getMakeUpdate()!=13) {
-			//marking the current players input on the server board
-			markTheBoard(moveIn, theBoard);
+				
+				markTheBoard(moveIn, theBoard);
+				
+				if (checkWin(theBoard)) {
+					executeIfWin();
+				}
+				else if(checkTie(theBoard)) {
+					executeIfTie();
+				}
+				else {                            // Indicates to both players whose turn it is next
+					executeForNextTurn();
+				}
+				// This sends an object to the waiting client and marks his/her board
+				moveIn.setOldMark(mark);
+				opponent.sendMove(moveIn);
+				
+				opponent.play(theBoard);
+				}
 			
-			//check for win --> if yes send appropriate switch case no, else proceed
-			if (checkWin(theBoard)) {
-				MoveData moveOut = new MoveData(11);
-				moveOut.setName(getName());
-				moveOut.setNewMark(opponent.getMark());
-				opponent.sendMove(moveOut);
-				sendMove(moveOut);
-			}
-			else if(checkTie(theBoard)) {
-				MoveData moveOut = new MoveData(12);
-				moveOut.setNewMark(opponent.getMark());
-				opponent.sendMove(moveOut);
-				sendMove(moveOut);
-			}
-			else {
-			//This sends messages to both clients indicating whose turn is next
-			MoveData moveOut = new MoveData(10);
-			moveOut.setName(opponent.getName());
-			moveOut.setNewMark(opponent.getMark());
-			opponent.sendMove(moveOut);
-			sendMove(moveOut);
-			}
-			//This sends an object to the waiting client and marks his/her board
-			moveIn.setOldMark(mark);
-			opponent.sendMove(moveIn);
-			
-			//This passes on the play to the other player
-			opponent.play(theBoard);
-			}
 			else {
 				MoveData moveOut = new MoveData(13);
 				opponent.sendMove(moveOut);
@@ -125,6 +121,12 @@ public class Player implements Constants{
 		}
 	}
 	
+	
+	/**
+	 * This is the switch board that takes in a MoveData object and marks the board based on the players move.
+	 * @param moveIn
+	 * @param theBoard
+	 */
 	public void markTheBoard(MoveData moveIn, Board theBoard) {
 		int makeUpdate = moveIn.getMakeUpdate();
 		switch(makeUpdate) {
@@ -168,7 +170,8 @@ public class Player implements Constants{
 	}
 	
 	
-	public void sendMove(MoveData moveOut) {
+// HELPER METHODS BELOW:----------------------------------------------------------------------------------
+	private void sendMove(MoveData moveOut) {
 		try {
 			socketOut.writeObject(moveOut);
 			socketOut.flush();
@@ -176,24 +179,46 @@ public class Player implements Constants{
 			e.printStackTrace();
 		}
 	}
-	/**
-	 * The makeMove method will prompt a player to choose a row and a column in 
-	 * order to make a move. After each move, the board will be displayed.
-	 */
-	public boolean checkWin(Board theBoard) {
+	
+	private boolean checkWin(Board theBoard) {
 		if(theBoard.checkWinner(mark)==1) {
 			return true;
 		}
 		return false;
 	}
 	
-	public boolean checkTie(Board theBoard) {
+	private boolean checkTie(Board theBoard) {
 		if(theBoard.isFull()) {
 			return true;
 		}
 		return false;
 	}
 	
+	private void executeIfWin() {
+		MoveData moveOut = new MoveData(11);
+		moveOut.setName(getName());
+		moveOut.setNewMark(opponent.getMark());
+		opponent.sendMove(moveOut);
+		sendMove(moveOut);
+	}
+	
+	private void executeIfTie() {
+		MoveData moveOut = new MoveData(12);
+		moveOut.setNewMark(opponent.getMark());
+		opponent.sendMove(moveOut);
+		sendMove(moveOut);
+	}
+	
+	private void executeForNextTurn() {
+		MoveData moveOut = new MoveData(10);
+		moveOut.setName(opponent.getName());
+		moveOut.setNewMark(opponent.getMark());
+		opponent.sendMove(moveOut);
+		sendMove(moveOut);
+	}
+
+	
+// GETTERS AND SETTERS:----------------------------------------------------------------------------------
 	public void setOpponent(Player opponent) {
 		this.opponent = opponent;
 	}
@@ -214,5 +239,4 @@ public class Player implements Constants{
 		this.mark = mark;
 	}
 
-	
 }

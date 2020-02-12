@@ -20,11 +20,14 @@ import Model.Player;
  */
 
 public class ServerController {
-	
+
+// INSTANCE VARIABLES:------------------------------------------------------------------------------------------------
 	private Socket aSocket; 
 	private ServerSocket serverSocket; 
 	private ExecutorService pool;
+
 	
+// CONSTRUCTOR:------------------------------------------------------------------------------------------------
 	public ServerController() {
 		try {
 			serverSocket = new ServerSocket(9898);
@@ -34,6 +37,8 @@ public class ServerController {
 		}
 	}
 	
+
+// INSTANCE METHODS:--------------------------------------------------------------------------------------------
 	/**
 	 * Runs the server. Accepts socket connections for clients and add players to the lobby. Creates a game instance on a thread for every two players who join.
 	 */
