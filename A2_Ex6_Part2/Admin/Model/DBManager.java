@@ -115,7 +115,7 @@ public interface DBManager extends Remote {
     boolean isMySQLServerUp() throws RemoteException;
 
     /**
-     * Public wrapper for the closeConnection helper method.
+     * Public wrapper for the restart helper method.
      */
-    void shutdownDB() throws RemoteException;
+    void restartDB() throws RemoteException;
 }

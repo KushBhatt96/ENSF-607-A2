@@ -1,0 +1,12 @@
+# ENSF 607 - Lab 2 - Exercise 6
+# Kush Bhatt & Matthew Vanderwey
+# 2020-02-09
+
+Please note the following regarding the attached Java source files:
+
+	1. Under the Server package, if you run the StartServer.bat batch file, it will start the server locally on your machine.
+		However, both the Client and Admin packages are currently setup to contact the sever already deployed on AWS.
+		
+	2. The Swing GUIs for both the Client and Admin Packages were built using IntelliJ IDEA and therefore will not compile correctly
+		outside of that IDE.  To run these packages, please execute the provided JAR files.  They will connect with the server deployed
+		on AWS.  

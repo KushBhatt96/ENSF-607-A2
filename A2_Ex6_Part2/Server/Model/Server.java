@@ -26,7 +26,7 @@ public class Server implements DBManager {
     private Connection connection;
     private PreparedStatement preparedStatement;
     private String connectionInfo, login, password;
-    private String DBName, tableName, fileName;
+    private String serverPath, DBName, tableName, fileName;
     private boolean dbConnectOK, setTableOK, tableFillOK;
 
     ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -84,24 +84,14 @@ public class Server implements DBManager {
 
         // Establish connection details from the Admin
         this.connectionInfo = connectionInfo;
+        this.serverPath = connectionInfo;
         this.login = login;
         this.password = password;
         this.DBName = DBName;
         this.tableName = tableName;
         this.fileName = fileName;
 
-        try {
-            // This is the package location for the MySQL driver that this application uses
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(connectionInfo, login, password);
-            dataLogger.writeToMessageLog("Connected to: " + connectionInfo);
-        } catch (SQLException | ClassNotFoundException sqlEx) {
-            dataLogger.writeToMessageLog("Cannot connect to: " + connectionInfo);
-            sqlEx.printStackTrace();
-        } catch (Exception catchall) {
-            dataLogger.writeToMessageLog("Something has gone terribly wrong...");
-            catchall.printStackTrace();
-        }
+        makeConnection(connectionInfo, login, password);
     }
 
     /**
@@ -117,7 +107,7 @@ public class Server implements DBManager {
                     preparedStatement = connection.prepareStatement(newDB);
                     preparedStatement.executeUpdate();
                 }
-                if(!dbConnectOK)
+                if (!dbConnectOK)
                     connection = updateConnection(connectionInfo, DBName);
                 dbConnectOK = true;
                 dataLogger.writeToMessageLog("Database " + DBName + " created");
@@ -393,24 +383,56 @@ public class Server implements DBManager {
 
     /**
      * Checks if the MySQL server is up
+     *
      * @return true if it is, otherwise false
      */
     @Override
     public boolean isMySQLServerUp() {
-        if(!isDBExist()) return false;
-        return true;
+        return isDBExist();
     }
 
     /**
-     * Public wrapper for the closeConnection helper method.
+     * Resets the MySQL DB connection if it has failed while the app server is still running
      */
     @Override
-    public void shutdownDB() {
-        closeConnection();
+    public void restartDB() {
+        try {
+            if (!connection.isValid(3)) {
+                if (preparedStatement != null) preparedStatement.close();
+                if (connection != null) connection.close();
+                connection = resetConnection();
+                dbConnectOK = setTableOK = tableFillOK = false;
+                makeConnection(serverPath, login, password);
+                dataLogger.writeToMessageLog("Connection to MySQL host reset");
+            }
+        } catch (SQLException e) {
+            dataLogger.writeToMessageLog("Failed To Properly Close DataBase Connection!");
+            e.printStackTrace();
+        }
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////
     // Helper Methods
+
+    /**
+     * @param connectionInfo URL of the MySQL Databse
+     * @param login          Usually "root" or "admin"
+     * @param password       Your MySQL DB user password
+     */
+    private void makeConnection(String connectionInfo, String login, String password) {
+        try {
+            // This is the package location for the MySQL driver that this application uses
+            Class.forName("com.mysql.jdbc.Driver");
+            connection = DriverManager.getConnection(connectionInfo, login, password);
+            dataLogger.writeToMessageLog("Connected to: " + connectionInfo);
+        } catch (SQLException | ClassNotFoundException sqlEx) {
+            dataLogger.writeToMessageLog("Cannot connect to: " + connectionInfo);
+            sqlEx.printStackTrace();
+        } catch (Exception catchall) {
+            dataLogger.writeToMessageLog("Something has gone terribly wrong...");
+            catchall.printStackTrace();
+        }
+    }
 
     /***
      * Returns an ArrayList of Clients based on selection type and search parameters
@@ -553,6 +575,17 @@ public class Server implements DBManager {
     }
 
     /**
+     * Resets the DB connection
+     *
+     * @return original connection path
+     * @throws SQLException to be caught by calling method
+     */
+    private Connection resetConnection() throws SQLException {
+        connectionInfo = serverPath;
+        return DriverManager.getConnection(connectionInfo, login, password);
+    }
+
+    /**
      * Sets up the PreparedStatement for a search of the database.
      *
      * @return false if missing search selection type and/or search parameters.
@@ -594,22 +627,6 @@ public class Server implements DBManager {
             }
         }
         return false;
-    }
-
-    /**
-     * Force closed the DB connection and preparedStatement.
-     */
-    private void closeConnection() {
-        try {
-            if (preparedStatement != null)
-                preparedStatement.close();
-            if (connection != null)
-                connection.close();
-            dataLogger.writeToMessageLog("Client Logged Out");
-        } catch (SQLException e) {
-            dataLogger.writeToMessageLog("Failed To Properly Close DataBase Connection!");
-            e.printStackTrace();
-        }
     }
 
 }

@@ -34,7 +34,7 @@ public class AdminController {
             // If the MySQL Server is down, reset it
             else if (!dbm.isMySQLServerUp()) {
                 // Reset the connection
-                dbm.shutdownDB();
+                dbm.restartDB();
                 // Setup the database schema
                 dbm.createDB();
                 // Create the Table
